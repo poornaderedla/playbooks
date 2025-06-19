@@ -35,6 +35,11 @@ const Navigation = () => {
       href: "/consulting/buyer-discovery"
     },
     {
+      title: "Seller Discovery",
+      description: "Find verified Indian suppliers and manufacturers",
+      href: "/consulting/seller-discovery"
+    },
+    {
       title: "Compliance & Documentation",
       description: "Navigate international trade regulations",
       href: "/consulting/compliance-docs"
@@ -43,11 +48,6 @@ const Navigation = () => {
       title: "Pricing Strategy",
       description: "Optimize pricing for global competitiveness",
       href: "/consulting/pricing-strategy"
-    },
-    {
-      title: "Strategy Sessions",
-      description: "1-on-1 personalized export consulting",
-      href: "/consulting/strategy-sessions"
     }
   ];
 
@@ -141,6 +141,15 @@ const Navigation = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
+                <Link to="/blog" className={cn(
+                  "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50",
+                  location.pathname === '/blog' && "bg-accent text-accent-foreground"
+                )}>
+                  Blog
+                </Link>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
                 <Link to="/about" className={cn(
                   "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50",
                   location.pathname === '/about' && "bg-accent text-accent-foreground"
@@ -162,9 +171,11 @@ const Navigation = () => {
 
           {/* CTA Button - Desktop */}
           <div className="hidden lg:flex">
-            <Button className="bg-blue-600 hover:bg-blue-700">
-              Book Free Call
-              <ArrowRight className="ml-2 w-4 h-4" />
+            <Button asChild className="bg-blue-600 hover:bg-blue-700">
+              <Link to="/consulting/book-free-call">
+                Book Free Call
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
             </Button>
           </div>
 
@@ -208,6 +219,14 @@ const Navigation = () => {
                 </div>
 
                 <Link 
+                  to="/blog" 
+                  className="text-lg font-medium hover:text-blue-600 transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Blog
+                </Link>
+
+                <Link 
                   to="/about" 
                   className="text-lg font-medium hover:text-blue-600 transition-colors"
                   onClick={() => setIsOpen(false)}
@@ -224,9 +243,11 @@ const Navigation = () => {
                 </Link>
 
                 <div className="pt-6">
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700">
-                    Book Free Call
-                    <ArrowRight className="ml-2 w-4 h-4" />
+                  <Button asChild className="w-full bg-blue-600 hover:bg-blue-700">
+                    <Link to="/consulting/book-free-call" onClick={() => setIsOpen(false)}>
+                      Book Free Call
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Link>
                   </Button>
                 </div>
               </div>
