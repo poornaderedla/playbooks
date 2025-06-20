@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -12,11 +11,18 @@ import {
   Package,
   DollarSign,
   Clock,
-  Star
+  Star,
+  Download
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { downloadPDFReport } from '@/utils/downloadUtils';
+import { exportReadinessAuditReport } from '@/data/sampleReports';
 
 const ExportReadiness = () => {
+  const handleDownloadSampleReport = () => {
+    downloadPDFReport(exportReadinessAuditReport, 'Export-Readiness-Audit-Sample-Report.txt');
+  };
+
   const auditChecklist = [
     {
       category: "Product Classification",
@@ -120,7 +126,8 @@ const ExportReadiness = () => {
                 Book Export Audit Call
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-              <Button variant="outline" size="lg">
+              <Button variant="outline" size="lg" onClick={handleDownloadSampleReport}>
+                <Download className="mr-2 w-5 h-5" />
                 Download Sample Report
               </Button>
             </div>
@@ -323,7 +330,8 @@ const ExportReadiness = () => {
               Book Export Audit Call
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600">
+            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600" onClick={handleDownloadSampleReport}>
+              <Download className="mr-2 w-5 h-5" />
               Download Checklist
             </Button>
           </div>

@@ -1,11 +1,16 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Search, Target, Users, Globe, CheckCircle, ArrowRight, Star, TrendingUp, Shield, Package } from 'lucide-react';
+import { Search, Target, Users, Globe, CheckCircle, ArrowRight, Star, TrendingUp, Shield, Package, Download, Eye } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { downloadPDFReport } from '@/utils/downloadUtils';
+import { sellerDiscoveryProfiles } from '@/data/sampleReports';
 
 const SellerDiscovery = () => {
+  const handleViewSampleProfiles = () => {
+    downloadPDFReport(sellerDiscoveryProfiles, 'Indian-Supplier-Profiles-Sample.txt');
+  };
+
   const features = [
     {
       icon: Search,
@@ -42,7 +47,7 @@ const SellerDiscovery = () => {
     },
     {
       step: "03",
-      title: "Verification & Vetting",
+4 title: "Verification & Vetting",
       description: "Comprehensive verification of supplier credentials, capacity, and quality systems"
     },
     {
@@ -207,7 +212,8 @@ const SellerDiscovery = () => {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-3">
+              <Button variant="outline" size="lg" className="text-lg px-8 py-3" onClick={handleViewSampleProfiles}>
+                <Eye className="mr-2 w-5 h-5" />
                 View Sample Profiles
               </Button>
             </div>
@@ -503,7 +509,8 @@ const SellerDiscovery = () => {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-purple-600">
+            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-purple-600" onClick={handleViewSampleProfiles}>
+              <Eye className="mr-2 w-5 h-5" />
               Download Supplier Guide
             </Button>
           </div>

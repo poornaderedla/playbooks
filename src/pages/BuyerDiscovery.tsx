@@ -1,11 +1,16 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Search, Target, Users, Globe, CheckCircle, ArrowRight, Star, TrendingUp, Shield } from 'lucide-react';
+import { Search, Target, Users, Globe, CheckCircle, ArrowRight, Star, TrendingUp, Shield, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { downloadPDFReport } from '@/utils/downloadUtils';
+import { buyerDiscoveryReport } from '@/data/sampleReports';
 
 const BuyerDiscovery = () => {
+  const handleDownloadSampleReport = () => {
+    downloadPDFReport(buyerDiscoveryReport, 'Buyer-Discovery-Sample-Report.txt');
+  };
+
   const features = [
     {
       icon: Search,
@@ -42,7 +47,7 @@ const BuyerDiscovery = () => {
     },
     {
       step: "03",
-      title: "Buyer Profiling",
+4 title: "Buyer Profiling",
       description: "We create detailed profiles of potential buyers with contact information"
     },
     {
@@ -160,7 +165,8 @@ const BuyerDiscovery = () => {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-3">
+              <Button variant="outline" size="lg" className="text-lg px-8 py-3" onClick={handleDownloadSampleReport}>
+                <Download className="mr-2 w-5 h-5" />
                 View Sample Report
               </Button>
             </div>
@@ -388,7 +394,8 @@ const BuyerDiscovery = () => {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600">
+            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600" onClick={handleDownloadSampleReport}>
+              <Download className="mr-2 w-5 h-5" />
               Download Sample Report
             </Button>
           </div>
