@@ -47,7 +47,7 @@ const BuyerDiscovery = () => {
     },
     {
       step: "03",
-4 title: "Buyer Profiling",
+      title: "Buyer Profiling",
       description: "We create detailed profiles of potential buyers with contact information"
     },
     {

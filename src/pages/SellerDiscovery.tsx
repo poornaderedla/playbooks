@@ -47,7 +47,7 @@ const SellerDiscovery = () => {
     },
     {
       step: "03",
-4 title: "Verification & Vetting",
+      title: "Verification & Vetting",
       description: "Comprehensive verification of supplier credentials, capacity, and quality systems"
     },
     {
