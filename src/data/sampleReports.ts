@@ -1205,3 +1205,550 @@ Report prepared by: Export Connect Global Sourcing Team
 Date: Current
 Validity: 90 days from issue date
 `;
+
+export const complianceDocuments = `
+EXPORT COMPLIANCE & DOCUMENTATION SAMPLE
+========================================
+
+DESTINATION: European Union (Germany)
+PRODUCT: Organic Turmeric Powder
+EXPORTER: ABC Spices Pvt Ltd
+
+1. REQUIRED DOCUMENTS CHECKLIST
+==============================
+
+A. EXPORT DOCUMENTS:
+- Commercial Invoice ✓
+- Packing List ✓
+- Bill of Lading ✓
+- Certificate of Origin (Form EUR.1) ✓
+- Export License (Not Required for this product)
+- Insurance Certificate ✓
+
+B. PRODUCT COMPLIANCE:
+- Organic Certificate (EU Regulation 834/2007) ✓
+- Heavy Metals Test Report ✓
+- Microbiological Test Report ✓
+- Aflatoxin Analysis Report ✓
+- Pesticide Residue Certificate ✓
+- Material Safety Data Sheet ✓
+
+C. EU SPECIFIC REQUIREMENTS:
+- EORI Number Registration ✓
+- Novel Foods Assessment (Not Required)
+- Food Contact Materials Declaration ✓
+- Nutritional Labeling Compliance ✓
+- HACCP Certificate ✓
+- GMP Certificate ✓
+
+2. REGULATORY COMPLIANCE SUMMARY
+===============================
+
+EU Regulation 834/2007 - Organic Production
+- Organic certificate from accredited body
+- Traceability documentation
+- Import license for organic products
+
+EU Regulation 1881/2006 - Maximum Levels
+- Heavy metals within permissible limits
+- Aflatoxin levels compliant
+- Pesticide residues below MRL
+
+EU Regulation 178/2002 - Food Law
+- Full traceability system
+- HACCP implementation
+- Allergen declarations
+
+3. DOCUMENTATION STATUS
+======================
+
+Document Type          Status    Validity    Notes
+-------------------------------------------------
+Commercial Invoice     Ready     N/A         EUR pricing
+Packing List          Ready     N/A         Net/Gross weights
+Certificate Origin     Ready     12 months   Form EUR.1
+Organic Certificate    Ready     12 months   NPOP certified
+Lab Test Reports       Ready     6 months    All parameters pass
+Insurance Certificate  Ready     Transit     Marine cargo policy
+
+4. CUSTOMS CLASSIFICATION
+========================
+
+HS Code: 091030 (Turmeric - Curcuma)
+EU TARIC: 0910301000
+Duty Rate: 0% (Most Favored Nation)
+VAT Rate: 19% (Germany)
+Import License: Not Required
+
+5. LABELING REQUIREMENTS
+=======================
+
+Mandatory Information:
+- Product name
+- Organic certification logo
+- Net weight
+- Country of origin
+- Nutritional information
+- Allergen statements
+- Best before date
+- Importer details
+
+Language: German (mandatory)
+Font Size: Minimum 1.2mm
+Organic Logo: EU Organic Logo required
+
+6. SHIPPING INSTRUCTIONS
+=======================
+
+Port of Loading: Mumbai (INMUN)
+Port of Discharge: Hamburg (DEHAM)
+Shipping Line: Maersk
+Transit Time: 18-22 days
+Container Type: 20' FCL
+Incoterms: CIF Hamburg
+
+Total Compliance Score: 95/100
+Clearance Probability: 98%
+Estimated Clearance Time: 1-2 days
+
+COMPLIANCE OFFICER: Dr. Priya Sharma
+REVIEW DATE: Current
+NEXT REVIEW: 6 months
+`;
+
+export const pricingStrategy = `
+EXPORT PRICING & COSTING STRATEGY ANALYSIS
+==========================================
+
+CLIENT: XYZ Textiles Ltd
+PRODUCT: Cotton Bed Sheets
+TARGET MARKET: United States
+ANALYSIS DATE: Current
+
+1. COMPREHENSIVE COST BREAKDOWN
+==============================
+
+A. DIRECT PRODUCT COSTS (Per Unit):
+Raw Materials:
+- Cotton fabric (2.5 yards @ $3.20/yard)    $8.00
+- Elastic/binding materials                   $0.50
+- Labels & packaging                          $0.75
+- Quality testing                            $0.25
+Subtotal Direct Materials:                   $9.50
+
+Manufacturing:
+- Labor costs (2.5 hours @ $2.40/hour)      $6.00
+- Machine time & utilities                   $1.20
+- Factory overhead allocation                $1.80
+Subtotal Manufacturing:                      $9.00
+
+Total Product Cost:                          $18.50
+
+B. EXPORT-SPECIFIC COSTS (Per Unit):
+Documentation & Compliance:
+- Export documentation                       $0.15
+- Quality certificates                       $0.10
+- Compliance testing                         $0.20
+
+Logistics & Shipping:
+- Packaging for export                       $0.85
+- Local transportation                       $0.25
+- Port handling charges                      $0.40
+- Ocean freight (per unit allocation)        $1.20
+- Marine insurance                           $0.15
+- Destination port charges                   $0.30
+
+Marketing & Sales:
+- Marketing materials                        $0.30
+- Sales commission (3%)                      Variable
+- Trade show participation                   $0.25
+- Sample costs                              $0.20
+
+Financial Costs:
+- Bank charges                              $0.25
+- Credit insurance                          $0.18
+- Currency hedging                          $0.12
+- Working capital cost                      $0.35
+
+Total Export Costs:                         $4.90
+
+TOTAL COST PER UNIT:                        $23.40
+
+2. MARKET ANALYSIS & COMPETITOR PRICING
+=======================================
+
+US Market Research:
+- Market Size: $2.8 billion (bed sheets)
+- Growth Rate: 4.2% annually
+- Price Sensitivity: Medium to High
+- Quality Focus: Thread count, organic cotton
+
+Competitor Analysis:
+Brand A (Premium): $45-65 per set
+Brand B (Mid-range): $32-48 per set  
+Brand C (Budget): $22-35 per set
+Our Position: Mid-range segment
+
+Price Point Analysis:
+- Premium (>$50): 15% market share
+- Mid-range ($30-50): 55% market share
+- Budget (<$30): 30% market share
+
+3. PRICING STRATEGY RECOMMENDATIONS
+==================================
+
+Strategy 1: Cost-Plus Pricing
+Base Cost: $23.40
+Markup: 70%
+Selling Price: $39.78
+Profit Margin: $16.38 (41%)
+
+Strategy 2: Market-Based Pricing
+Market Range: $32-48
+Our Price: $42.00
+Profit Margin: $18.60 (44%)
+Position: Mid-range premium
+
+Strategy 3: Value-Based Pricing
+Unique Value: Certified organic cotton
+Premium Justified: 15-20%
+Selling Price: $48.00
+Profit Margin: $24.60 (51%)
+
+RECOMMENDED STRATEGY: Market-Based at $42.00
+- Competitive positioning
+- Healthy profit margin
+- Room for volume discounts
+- Market penetration potential
+
+4. VOLUME-BASED PRICING TIERS
+=============================
+
+Order Quantity     Unit Price    Margin %
+1-100 sets         $42.00        44%
+101-500 sets       $40.00        41%
+501-1000 sets      $38.50        39%
+1000+ sets         $37.00        37%
+
+Bulk discount strategy encourages larger orders
+while maintaining profitable margins.
+
+5. RISK FACTORS & MITIGATION
+============================
+
+Currency Risk:
+- USD/INR volatility: ±5%
+- Hedging recommended for 80% exposure
+- Review pricing quarterly
+
+Competition Risk:
+- New entrants possible
+- Maintain quality differentiation
+- Monitor competitor pricing monthly
+
+Cost Inflation Risk:
+- Cotton prices volatile
+- Raw material contracts recommended
+- Price escalation clause in contracts
+
+6. FINANCIAL PROJECTIONS
+========================
+
+Monthly Volume Estimate: 2,000 sets
+Revenue at $42/set: $84,000
+Total Costs: $46,800
+Gross Profit: $37,200
+Margin %: 44.3%
+
+Annual Projections:
+Year 1: 20,000 sets - $840,000 revenue
+Year 2: 35,000 sets - $1,470,000 revenue
+Year 3: 50,000 sets - $2,100,000 revenue
+
+Break-even: 1,200 sets per month
+
+7. IMPLEMENTATION ROADMAP
+========================
+
+Month 1: Launch at $42 with introductory offer
+Month 2-3: Monitor market response
+Month 4: Implement volume pricing tiers
+Month 6: Review and adjust based on data
+Month 12: Annual pricing strategy review
+
+PRICING STRATEGIST: Michael Chen
+APPROVAL STATUS: Ready for Implementation
+REVIEW CYCLE: Quarterly
+`;
+
+export const exportStrategySession = `
+1-ON-1 EXPORT STRATEGY SESSION REPORT
+=====================================
+
+CLIENT: Green Valley Organics
+SESSION TYPE: Strategy Development Session
+CONSULTANT: Dr. Priya Sharma
+DURATION: 90 minutes
+DATE: Current
+
+1. CURRENT SITUATION ANALYSIS
+============================
+
+Business Profile:
+- Company: Green Valley Organics
+- Products: Organic Rice, Pulses, Spices
+- Experience: 3 years domestic, 0 international
+- Revenue: $500,000 annually (domestic)
+- Team Size: 12 employees
+
+Strengths Identified:
+✓ Certified organic products
+✓ Strong domestic brand
+✓ Quality supply chain
+✓ Good financial health
+✓ Passionate leadership
+
+Challenges Identified:
+× No export experience
+× Limited market knowledge
+× Compliance uncertainty
+× Resource constraints
+× Risk concerns
+
+2. EXPORT READINESS ASSESSMENT
+==============================
+
+Product Readiness: 8/10
+- High quality organic products
+- Good packaging and branding
+- Certifications in place
+- Minor labeling adjustments needed
+
+Market Readiness: 5/10
+- Strong domestic reputation
+- Limited international awareness
+- Need market research
+- Competitive positioning unclear
+
+Operational Readiness: 6/10
+- Good production capacity
+- Basic documentation systems
+- Need export procedures
+- Staff training required
+
+Financial Readiness: 7/10
+- Healthy cash flow
+- Some working capital
+- Need export financing
+- Risk management planning
+
+3. RECOMMENDED TARGET MARKETS
+============================
+
+Primary Market: United States
+Rationale:
+- Large organic food market ($50B)
+- Growing Indian food segment
+- Established import channels
+- Premium pricing potential
+
+Market Size: $2.1B (organic rice & pulses)
+Entry Barriers: Medium
+Competition: Moderate
+Profit Potential: High
+
+Secondary Market: UAE
+Rationale:
+- Large Indian diaspora
+- Re-export hub potential
+- Familiar market dynamics
+- Lower compliance complexity
+
+Market Size: $180M
+Entry Barriers: Low
+Competition: High
+Profit Potential: Medium
+
+Tertiary Market: Germany
+Rationale:
+- Premium organic market
+- Health-conscious consumers
+- EU market access
+- Sustainability focus
+
+Market Size: $850M
+Entry Barriers: High
+Competition: Medium
+Profit Potential: High
+
+4. STRATEGIC ROADMAP (12 MONTHS)
+===============================
+
+Phase 1 (Months 1-3): Foundation
+□ Complete export readiness audit
+□ Obtain necessary certifications
+□ Develop export pricing strategy
+□ Set up export documentation system
+□ Train key staff on export procedures
+
+Phase 2 (Months 4-6): Market Entry
+□ Conduct detailed US market research
+□ Develop market entry strategy
+□ Create marketing materials
+□ Identify potential buyers/distributors
+□ Participate in trade shows
+
+Phase 3 (Months 7-9): Launch
+□ Execute first export orders
+□ Monitor and optimize operations
+□ Build customer relationships
+□ Expand product offerings
+□ Gather market feedback
+
+Phase 4 (Months 10-12): Scale
+□ Evaluate UAE market entry
+□ Develop distribution partnerships
+□ Plan for second-year growth
+□ Consider additional markets
+□ Build export team
+
+5. IMMEDIATE ACTION ITEMS
+========================
+
+Week 1-2:
+1. Apply for IEC (Import Export Code)
+2. Register with DGFT
+3. Open export-specific bank account
+4. Contact freight forwarder
+5. Review current certifications
+
+Week 3-4:
+6. Develop export pricing model
+7. Create export quality manual
+8. Design export packaging
+9. Prepare marketing materials
+10. Research US importers
+
+Month 2:
+11. Complete market research
+12. Develop buyer database
+13. Create export procedures manual
+14. Train operations team
+15. Set up quality control systems
+
+6. INVESTMENT REQUIREMENTS
+=========================
+
+Initial Setup Costs:
+- Certifications & registrations: $3,000
+- Export packaging development: $5,000
+- Marketing materials: $4,000
+- Trade show participation: $8,000
+- Consultant/legal fees: $6,000
+- Working capital buffer: $25,000
+
+Total Initial Investment: $51,000
+
+Monthly Operating Costs:
+- Export marketing: $2,000
+- Additional staffing: $3,000
+- Certification maintenance: $500
+- Insurance & financing: $1,500
+
+Total Monthly: $7,000
+
+7. REVENUE PROJECTIONS
+=====================
+
+Year 1 Targets:
+- Export revenue: $150,000
+- Export margin: 35%
+- Number of customers: 5-8
+- Countries: 1-2
+
+Conservative Scenario: $100,000
+Optimistic Scenario: $250,000
+
+Year 2-3 Growth:
+Year 2: $400,000 (167% growth)
+Year 3: $750,000 (88% growth)
+
+8. RISK MITIGATION STRATEGIES
+============================
+
+Market Risk:
+- Start with test shipments
+- Diversify customer base
+- Monitor competitor activity
+- Maintain quality standards
+
+Operational Risk:
+- Implement robust procedures
+- Train backup personnel
+- Maintain quality systems
+- Regular compliance audits
+
+Financial Risk:
+- Use export credit insurance
+- Secure favorable payment terms
+- Maintain cash flow reserves
+- Monitor currency fluctuations
+
+9. SUCCESS METRICS & KPIs
+========================
+
+Short-term (3 months):
+- Complete export setup
+- Generate 50 buyer inquiries
+- Secure 2 pilot customers
+- Process first export order
+
+Medium-term (6 months):
+- $50,000 export revenue
+- 5 active customers
+- 95% on-time delivery
+- Zero compliance issues
+
+Long-term (12 months):
+- $150,000 export revenue
+- 8 customers across 2 countries
+- 15% of total company revenue
+- Established market presence
+
+10. NEXT STEPS & FOLLOW-UP
+=========================
+
+Immediate Actions (This Week):
+1. Begin IEC application process
+2. Contact 3 freight forwarders
+3. Schedule certification audit
+4. Create project timeline
+5. Assign internal project lead
+
+Follow-up Sessions Recommended:
+- Month 2: Market research review
+- Month 4: Launch strategy session
+- Month 6: Performance review session
+
+Resources Provided:
+- Export procedures checklist
+- US market research template
+- Buyer outreach email templates
+- Pricing calculation worksheet
+- Compliance documentation guide
+
+SESSION OUTCOME: Comprehensive export strategy developed
+CLIENT CONFIDENCE LEVEL: High
+IMPLEMENTATION PROBABILITY: 85%
+RECOMMENDED NEXT SESSION: Market Research Review (Month 2)
+
+CONSULTANT NOTES:
+Client shows strong commitment and realistic expectations. 
+Organic products have good market potential. Recommend 
+starting with US market due to size and opportunity.
+Conservative approach with gradual scaling recommended.
+
+SESSION RECORDING: Available in client portal
+ACTION PLAN: Delivered within 24 hours
+SUPPORT: Email follow-up included for 30 days
+`;

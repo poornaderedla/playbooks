@@ -39,6 +39,11 @@ const Navigation = () => {
       href: "/consulting/seller-discovery"
     },
     {
+      title: "Global Seller Discovery",
+      description: "Connect with verified suppliers worldwide",
+      href: "/consulting/global-seller-discovery"
+    },
+    {
       title: "Compliance & Documentation",
       description: "Navigate international trade regulations",
       href: "/consulting/compliance-docs"
@@ -47,6 +52,11 @@ const Navigation = () => {
       title: "Pricing Strategy",
       description: "Optimize pricing for global competitiveness",
       href: "/consulting/pricing-strategy"
+    },
+    {
+      title: "Export Strategy Sessions",
+      description: "1-on-1 mentorship with export experts",
+      href: "/consulting/export-strategy-sessions"
     }
   ];
 
@@ -110,7 +120,7 @@ const Navigation = () => {
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                    <li className="row-span-3">
+                    <li className="row-span-4">
                       <NavigationMenuLink asChild>
                         <Link
                           className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-blue-500 to-green-500 p-6 no-underline outline-none focus:shadow-md"
@@ -126,7 +136,7 @@ const Navigation = () => {
                         </Link>
                       </NavigationMenuLink>
                     </li>
-                    {consultingServices.slice(0, 3).map((service) => (
+                    {consultingServices.slice(0, 4).map((service) => (
                       <ListItem
                         key={service.href}
                         href={service.href}
@@ -163,6 +173,15 @@ const Navigation = () => {
                   location.pathname === '/contact' && "bg-accent text-accent-foreground"
                 )}>
                   Contact
+                </Link>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <Link to="/login" className={cn(
+                  "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50",
+                  location.pathname === '/login' && "bg-accent text-accent-foreground"
+                )}>
+                  Login
                 </Link>
               </NavigationMenuItem>
             </NavigationMenuList>
@@ -239,6 +258,14 @@ const Navigation = () => {
                   onClick={() => setIsOpen(false)}
                 >
                   Contact
+                </Link>
+
+                <Link 
+                  to="/login" 
+                  className="text-lg font-medium hover:text-blue-600 transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Login
                 </Link>
 
                 <div className="pt-6">
