@@ -1,4 +1,3 @@
-
 export const exportReadinessAuditReport = `
 EXPORT READINESS AUDIT REPORT
 ===============================
@@ -1041,4 +1040,168 @@ Supplier Engagement Process:
 This comprehensive supplier profile report provides the foundation for successful sourcing partnerships with verified Indian manufacturers.
 
 For detailed supplier introductions and partnership facilitation, contact our sourcing team.
+`;
+
+export const globalSellerDiscoveryProfiles = `
+GLOBAL SUPPLIER DISCOVERY REPORT
+===============================
+
+EXECUTIVE SUMMARY
+-----------------
+This comprehensive report presents verified global suppliers across multiple regions and industries. Our international sourcing network provides access to reliable manufacturers and suppliers from 50+ countries worldwide.
+
+REGIONAL SUPPLIER BREAKDOWN
+---------------------------
+
+ASIA-PACIFIC REGION
+Country: China
+- Shenzhen Electronics Manufacturing Ltd.
+  Contact: Li Wei, Export Manager
+  Email: export@szmfg.com.cn
+  Phone: +86-755-8888-9999
+  Specialization: Consumer Electronics, IoT Devices
+  Certifications: ISO 9001, CE, FCC, RoHS
+  Production Capacity: 100,000 units/month
+  MOQ: 1,000 pieces
+  Lead Time: 15-20 days
+
+- Guangzhou Textile Industries Co.
+  Contact: Chen Ming, Business Development
+  Email: sales@gztextile.com
+  Phone: +86-20-7777-8888
+  Specialization: Apparel, Home Textiles
+  Certifications: OEKO-TEX, GOTS, BSCI
+  Production Capacity: 500,000 pieces/month
+  MOQ: 500 pieces per design
+  Lead Time: 25-30 days
+
+Country: Vietnam
+- Hanoi Precision Manufacturing
+  Contact: Nguyen Van Duc, Export Director
+  Email: export@hanoiprecision.vn
+  Phone: +84-24-6666-7777
+  Specialization: Automotive Parts, Metal Components
+  Certifications: ISO 9001, TS 16949, ISO 14001
+  Production Capacity: 50,000 parts/month
+  MOQ: 100 pieces
+  Lead Time: 20-25 days
+
+EUROPEAN REGION
+Country: Germany
+- Stuttgart Precision Engineering GmbH
+  Contact: Klaus Mueller, International Sales
+  Email: export@stuttgart-precision.de
+  Phone: +49-711-555-0123
+  Specialization: Industrial Machinery, Precision Tools
+  Certifications: ISO 9001, CE, DIN Standards
+  Production Capacity: Custom manufacturing
+  MOQ: 1 piece
+  Lead Time: 45-60 days
+
+- Hamburg Chemical Solutions
+  Contact: Dr. Anna Weber, Export Manager
+  Email: sales@hamburg-chem.de
+  Phone: +49-40-777-8899
+  Specialization: Specialty Chemicals, Industrial Coatings
+  Certifications: ISO 14001, REACH, FDA
+  Production Capacity: 10,000 tons/year
+  MOQ: 1 ton
+  Lead Time: 30-35 days
+
+Country: Italy
+- Milano Fashion Manufacturing S.r.l.
+  Contact: Marco Rossi, Business Development
+  Email: export@milanofashion.it
+  Phone: +39-02-333-4444
+  Specialization: Luxury Leather Goods, Fashion Accessories
+  Certifications: Made in Italy, LWG, ISO 9001
+  Production Capacity: 25,000 pieces/month
+  MOQ: 50 pieces
+  Lead Time: 35-40 days
+
+NORTH AMERICAN REGION
+Country: USA
+- California Tech Components Inc.
+  Contact: Sarah Johnson, VP Sales
+  Email: sales@caltech-comp.com
+  Phone: +1-408-555-0199
+  Specialization: Semiconductor Components, PCBs
+  Certifications: ISO 9001, UL, FCC, RoHS
+  Production Capacity: 1 million components/month
+  MOQ: 10,000 pieces
+  Lead Time: 12-15 days
+
+Country: Mexico
+- Tijuana Manufacturing Solutions
+  Contact: Carlos Rodriguez, Export Manager
+  Email: export@tijuana-mfg.mx
+  Phone: +52-664-777-8888
+  Specialization: Automotive Assembly, Electronics
+  Certifications: ISO 9001, TS 16949, IATF
+  Production Capacity: 200,000 assemblies/month
+  MOQ: 500 pieces
+  Lead Time: 18-22 days
+
+VERIFICATION CHECKLIST
+----------------------
+✓ Company Registration & Legal Status
+✓ Export Licenses & International Certifications
+✓ Quality Management Systems (ISO Standards)
+✓ Financial Stability Assessment
+✓ Production Capacity Verification
+✓ Client Reference Checks
+✓ Compliance with International Standards
+✓ Supply Chain Transparency
+✓ Ethical Sourcing Practices
+✓ Risk Assessment (Political/Economic)
+
+RISK ASSESSMENT SUMMARY
+-----------------------
+• Low Risk: Germany, USA, Japan, South Korea
+• Medium Risk: China, Vietnam, Mexico, Italy
+• Considerations: Currency fluctuation, political stability, trade agreements
+
+RECOMMENDED NEXT STEPS
+----------------------
+1. Initial supplier contact and capability assessment
+2. Sample request and quality evaluation
+3. Factory audit (virtual or on-site)
+4. Commercial terms negotiation
+5. Trial order placement
+6. Long-term partnership development
+
+MARKET INTELLIGENCE
+-------------------
+• Global manufacturing costs trending upward by 3-5% annually
+• Automation adoption reducing labor dependency
+• Sustainability certifications becoming mandatory
+• Supply chain diversification critical for risk mitigation
+• Regional trade agreements affecting cost structures
+
+LOGISTICS CONSIDERATIONS
+------------------------
+• Sea freight: 25-45 days from Asia, 10-15 days intra-regional
+• Air freight: 3-7 days globally, premium pricing
+• Customs clearance: 2-5 days depending on destination
+• Documentation: CO, Packing List, Invoice, Insurance
+• Incoterms: Recommend FOB or CIF for new relationships
+
+PAYMENT TERMS ANALYSIS
+----------------------
+• Letter of Credit: Safest for new suppliers
+• T/T (Wire Transfer): 30% advance, 70% before shipment
+• Trade Assurance: Available through major platforms
+• Payment Protection: Recommended for orders >$50,000
+
+CULTURAL BUSINESS PRACTICES
+---------------------------
+Asia: Relationship-building essential, hierarchy respect
+Europe: Punctuality, formal communication, technical focus
+Americas: Direct communication, efficiency-oriented
+
+This report provides a foundation for global supplier engagement. Each supplier has been pre-verified for export readiness and manufacturing capability.
+
+Report prepared by: Export Connect Global Sourcing Team
+Date: Current
+Validity: 90 days from issue date
 `;

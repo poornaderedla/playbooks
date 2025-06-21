@@ -14,6 +14,7 @@ import ExportReadiness from "./pages/ExportReadiness";
 import MarketResearch from "./pages/MarketResearch";
 import BuyerDiscovery from "./pages/BuyerDiscovery";
 import SellerDiscovery from "./pages/SellerDiscovery";
+import GlobalSellerDiscovery from "./pages/GlobalSellerDiscovery";
 import BookFreeCall from "./pages/BookFreeCall";
 import NotFound from "./pages/NotFound";
 
@@ -38,6 +39,7 @@ const App = () => (
               <Route path="/consulting/market-research" element={<MarketResearch />} />
               <Route path="/consulting/buyer-discovery" element={<BuyerDiscovery />} />
               <Route path="/consulting/seller-discovery" element={<SellerDiscovery />} />
+              <Route path="/consulting/global-seller-discovery" element={<GlobalSellerDiscovery />} />
               <Route path="/consulting/book-free-call" element={<BookFreeCall />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
