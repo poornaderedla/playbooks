@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -77,7 +76,7 @@ const About = () => {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
-              <Button variant="outline" asChild className="text-lg px-8 py-3">
+              <Button variant="outline" asChild className="text-gray-700 text-lg px-8 py-3">
                 <Link to="/consulting">View Our Services</Link>
               </Button>
             </div>

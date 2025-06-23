@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Search, Target, Users, Globe, CheckCircle, ArrowRight, Star, TrendingUp, Shield, Download } from 'lucide-react';
+import { Search, Target, Users, Globe, CheckCircle, ArrowRight, Star, TrendingUp, Shield, Eye } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { downloadPDFReport } from '@/utils/downloadUtils';
 import { buyerDiscoveryReport } from '@/data/sampleReports';
@@ -165,8 +165,8 @@ const BuyerDiscovery = () => {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-3" onClick={handleDownloadSampleReport}>
-                <Download className="mr-2 w-5 h-5" />
+              <Button variant="outline" size="lg" className="text-gray-700 text-lg px-8 py-3" onClick={handleDownloadSampleReport}>
+                <Eye className="mr-2 w-5 h-5" />
                 View Sample Report
               </Button>
             </div>
@@ -388,15 +388,15 @@ const BuyerDiscovery = () => {
             Join hundreds of exporters who've discovered new markets with our AI-powered buyer discovery.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+            <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
               <Link to="/consulting/book-free-call">
                 Start Discovery Process
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600" onClick={handleDownloadSampleReport}>
-              <Download className="mr-2 w-5 h-5" />
-              Download Sample Report
+            <Button variant="outline" size="lg" className="text-gray-700 text-lg px-8 py-3" onClick={handleDownloadSampleReport}>
+              <Eye className="mr-2 w-5 h-5" />
+              View Sample Report
             </Button>
           </div>
         </div>

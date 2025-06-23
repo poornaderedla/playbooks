@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { BarChart, TrendingUp, Globe, Target, CheckCircle, ArrowRight, Users, DollarSign, Shield, Zap, Download } from 'lucide-react';
+import { BarChart, TrendingUp, Globe, Target, CheckCircle, ArrowRight, Users, DollarSign, Shield, Zap, Download, Eye } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { downloadPDFReport } from '@/utils/downloadUtils';
 import { marketResearchReport } from '@/data/sampleReports';
@@ -228,9 +228,9 @@ const MarketResearch = () => {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-3" onClick={handleDownloadSampleReport}>
-                <Download className="mr-2 w-5 h-5" />
-                Download Sample Report
+              <Button variant="outline" size="lg" className="text-gray-700 text-lg px-8 py-3" onClick={handleDownloadSampleReport}>
+                <Eye className="mr-2 w-5 h-5" />
+                View Sample Report
               </Button>
             </div>
           </div>
@@ -417,8 +417,8 @@ const MarketResearch = () => {
                 </div>
                 <div className="text-center mt-8">
                   <Button variant="outline" className="border-green-600 text-green-600 hover:bg-green-50" onClick={handleDownloadSampleReport}>
-                    <Download className="mr-2 w-4 h-4" />
-                    Download Sample Report
+                    <Eye className="mr-2 w-4 h-4" />
+                    View Sample Report
                   </Button>
                 </div>
               </CardContent>
@@ -535,9 +535,9 @@ const MarketResearch = () => {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-green-600" onClick={handleDownloadSampleReport}>
-              <Download className="mr-2 w-5 h-5" />
-              View Sample Reports
+            <Button variant="outline" size="lg" className="bg-white text-green-600 hover:bg-gray-100" onClick={handleDownloadSampleReport}>
+              <Eye className="mr-2 w-5 h-5" />
+              View Sample Report
             </Button>
           </div>
         </div>

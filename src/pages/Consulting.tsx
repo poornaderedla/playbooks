@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -58,7 +57,7 @@ const Consulting = () => {
       title: "1-on-1 Export Strategy Sessions",
       description: "Personalized consulting calls to accelerate your export journey.",
       icon: <MessageCircle className="w-8 h-8 text-red-600" />,
-      slug: "strategy-sessions",
+      slug: "export-strategy-sessions",
       features: ["Personal Advisor", "Custom Roadmap", "Ongoing Support"]
     }
   ];
@@ -126,13 +125,15 @@ const Consulting = () => {
               Navigate international trade with confidence and accelerate your global growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3">
-                Book Free Discovery Call
-                <ArrowRight className="ml-2 w-5 h-5" />
+              <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3">
+                <Link to="/consulting/book-free-call">   
+                  Book Free Discovery Call
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
               </Button>
-              <Button variant="outline" size="lg" className="px-8 py-3">
+              {/* <Button variant="outline" size="lg" className="px-8 py-3">
                 View Our Services
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>
@@ -301,13 +302,15 @@ const Consulting = () => {
             Book a free 15-minute discovery call and let's discuss your global trade goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3">
-              Book Free Discovery Call
-              <ArrowRight className="ml-2 w-5 h-5" />
+            <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3">
+              <Link to="/consulting/book-free-call">
+                Book Free Discovery Call
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
             </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3">
+            {/* <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3">
               View Case Studies
-            </Button>
+            </Button> */}
           </div>
         </div>
       </section>

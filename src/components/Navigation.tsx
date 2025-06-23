@@ -118,9 +118,9 @@ const Navigation = () => {
                 )}>
                   Consulting
                 </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                    <li className="row-span-4">
+                <NavigationMenuContent className="left-1/2 -translate-x-1/2 absolute z-50 w-[95vw] min-w-[900px] max-w-5xl bg-white border rounded-lg shadow-lg overflow-visible">
+                  <ul className="grid w-full gap-3 p-4 grid-cols-3">
+                    <li className="col-span-1 flex flex-col h-full">
                       <NavigationMenuLink asChild>
                         <Link
                           className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-blue-500 to-green-500 p-6 no-underline outline-none focus:shadow-md"
@@ -136,7 +136,9 @@ const Navigation = () => {
                         </Link>
                       </NavigationMenuLink>
                     </li>
-                    {consultingServices.slice(0, 4).map((service) => (
+                    <li className="col-span-2">
+                      <ul className="grid grid-cols-2 gap-3">
+                        {consultingServices.map((service) => (
                       <ListItem
                         key={service.href}
                         href={service.href}
@@ -145,6 +147,8 @@ const Navigation = () => {
                         {service.description}
                       </ListItem>
                     ))}
+                      </ul>
+                    </li>
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
@@ -178,10 +182,10 @@ const Navigation = () => {
 
               <NavigationMenuItem>
                 <Link to="/login" className={cn(
-                  "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50",
+                  // "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50",
                   location.pathname === '/login' && "bg-accent text-accent-foreground"
                 )}>
-                  Login
+                  
                 </Link>
               </NavigationMenuItem>
             </NavigationMenuList>

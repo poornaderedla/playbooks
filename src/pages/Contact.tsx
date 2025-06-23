@@ -28,19 +28,19 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      details: "hello@eximpro.com",
+      details: "contact@drehill.com",
       description: "Get a response within 24 hours"
     },
     {
       icon: Phone,
       title: "Call Us",
-      details: "+91 98765 43210",
+      details: "+91 7901050607",
       description: "Mon-Fri, 9 AM - 6 PM IST"
     },
     {
       icon: MapPin,
       title: "Visit Us",
-      details: "Mumbai, India",
+      details: "Chhatrapati SambhajiNagar, Maharashtra 431001",
       description: "Schedule an in-person meeting"
     },
     {
@@ -52,30 +52,30 @@ const Contact = () => {
   ];
 
   const offices = [
-    {
-      city: "Mumbai",
-      country: "India",
-      address: "Bandra Kurla Complex, Mumbai 400051",
-      phone: "+91 98765 43210",
-      email: "mumbai@eximpro.com",
-      isHQ: true
-    },
-    {
-      city: "Dubai",
-      country: "UAE",
-      address: "DIFC, Dubai, UAE",
-      phone: "+971 50 123 4567",
-      email: "dubai@eximpro.com",
-      isHQ: false
-    },
-    {
-      city: "Singapore",
-      country: "Singapore",
-      address: "Marina Bay, Singapore",
-      phone: "+65 8123 4567",
-      email: "singapore@eximpro.com",
-      isHQ: false
-    }
+    // {
+    //   city: "Mumbai",
+    //   country: "India",
+    //   address: "Bandra Kurla Complex, Mumbai 400051",
+    //   phone: "+91 98765 43210",
+    //   email: "mumbai@eximpro.com",
+    //   isHQ: true
+    // },
+    // {
+    //   city: "Dubai",
+    //   country: "UAE",
+    //   address: "DIFC, Dubai, UAE",
+    //   phone: "+971 50 123 4567",
+    //   email: "dubai@eximpro.com",
+    //   isHQ: false
+    // },
+    // {
+    //   city: "Singapore",
+    //   country: "Singapore",
+    //   address: "Marina Bay, Singapore",
+    //   phone: "+65 8123 4567",
+    //   email: "singapore@eximpro.com",
+    //   isHQ: false
+    // }
   ];
 
   const faqs = [

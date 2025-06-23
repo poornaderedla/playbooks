@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -217,9 +216,9 @@ const GlobalSellerDiscovery = () => {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-3" onClick={handleViewSampleProfiles}>
+              <Button variant="outline" size="lg" className="text-gray-700 text-lg px-8 py-3" onClick={handleViewSampleProfiles}>
                 <Eye className="mr-2 w-5 h-5" />
-                View Sample Profiles
+                View Sample Reports
               </Button>
             </div>
             
@@ -520,9 +519,9 @@ const GlobalSellerDiscovery = () => {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-green-600" onClick={handleViewSampleProfiles}>
+            <Button variant="outline" size="lg" className="bg-white text-green-600 hover:bg-gray-100" onClick={handleViewSampleProfiles}>
               <Eye className="mr-2 w-5 h-5" />
-              Download Global Guide
+              View Sample Reports
             </Button>
           </div>
         </div>

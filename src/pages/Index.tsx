@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -68,9 +67,14 @@ const Index = () => {
                   <ArrowRight className="ml-2 w-6 h-6" />
                 </Button>
               </Link>
-              <Button variant="outline" size="lg" className="px-8 py-4 text-lg">
-                Book Free Consultation
-              </Button>
+              <Link to="/consulting/book-free-call">
+                <Button
+                  size="lg"
+                  className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold shadow-md"
+                >
+                  Book Free Consultation
+                </Button>
+              </Link>
             </div>
             
             {/* Stats */}
@@ -190,7 +194,7 @@ const Index = () => {
               </blockquote>
               <div className="border-t pt-6">
                 <div className="font-semibold text-lg">Rahul Agarwal</div>
-                <div className="text-gray-600">CEO, Global Spices Ltd</div>
+                {/* <div className="text-gray-600">CEO, Global Spices Ltd</div> */}
                 <div className="text-blue-600 font-medium mt-1">🌍 Exporting to US, EU, UAE, Singapore</div>
               </div>
             </CardContent>
@@ -212,9 +216,14 @@ const Index = () => {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3">
-              Book Free Consultation
-            </Button>
+            <Link to="/consulting/book-free-call">
+              <Button
+                size="lg"
+                className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold shadow-md"
+              >
+                Book Free Consultation
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -244,15 +243,15 @@ const PricingStrategy = () => {
               avoiding costly pricing mistakes that derail export success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-green-600 hover:bg-green-700 text-lg px-8 py-3">
+              <Button asChild size="lg" className="bg-white text-green-600 hover:bg-gray-100 text-lg px-8 py-3">
                 <Link to="/consulting/book-free-call">
-                  Optimize Your Pricing
+                  Start Pricing Optimization
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-3" onClick={handleViewSampleAnalysis}>
+              <Button variant="outline" size="lg" className="text-gray-700 text-lg px-8 py-3" onClick={handleViewSampleAnalysis}>
                 <Eye className="mr-2 w-5 h-5" />
-                View Sample Analysis
+                View Sample Reports
               </Button>
             </div>
             
@@ -541,12 +540,18 @@ const PricingStrategy = () => {
             <p className="text-xl text-green-100 mb-8">
               Stop leaving money on the table. Get professional pricing strategy that maximizes your profits.
             </p>
-            <Button asChild size="lg" className="bg-white text-green-600 hover:bg-gray-100 text-lg px-8 py-3">
-              <Link to="/consulting/book-free-call">
-                Start Pricing Optimization
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" className="bg-white text-green-600 hover:bg-gray-100 text-lg px-8 py-3">
+                <Link to="/consulting/book-free-call">
+                  Start Pricing Optimization
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+              </Button>
+              <Button variant="outline" size="lg" className="bg-white text-green-600 hover:bg-gray-100 text-lg px-8 py-3" onClick={handleViewSampleAnalysis}>
+                <Eye className="mr-2 w-5 h-5" />
+                View Sample Reports
+              </Button>
+            </div>
           </div>
         </div>
       </section>

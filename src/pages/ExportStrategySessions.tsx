@@ -1,8 +1,7 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Users, Target, MessageCircle, Calendar, ArrowRight, CheckCircle, Clock, Star, Video, Phone } from 'lucide-react';
+import { Users, Target, MessageCircle, Calendar, ArrowRight, CheckCircle, Clock, Star, Video, Phone, Eye } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const ExportStrategySessions = () => {
@@ -249,15 +248,15 @@ const ExportStrategySessions = () => {
               Skip the learning curve and accelerate your export success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-orange-600 hover:bg-orange-700 text-lg px-8 py-3">
+              <Button asChild size="lg" className="bg-white text-orange-600 hover:bg-gray-100 text-lg px-8 py-3">
                 <Link to="/consulting/book-free-call">
-                  Book Strategy Session
+                  Book Your Strategy Session
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-3">
-                <Calendar className="mr-2 w-5 h-5" />
-                View Available Times
+              <Button variant="outline" size="lg" className="text-gray-700 text-lg px-8 py-3">
+                <Eye className="mr-2 w-5 h-5" />
+                View Sample Reports
               </Button>
             </div>
             
@@ -600,12 +599,18 @@ const ExportStrategySessions = () => {
             <p className="text-xl text-orange-100 mb-8">
               Don't navigate the complex world of international trade alone. Get expert guidance today.
             </p>
-            <Button asChild size="lg" className="bg-white text-orange-600 hover:bg-gray-100 text-lg px-8 py-3">
-              <Link to="/consulting/book-free-call">
-                Book Your Strategy Session
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" className="bg-white text-orange-600 hover:bg-gray-100 text-lg px-8 py-3">
+                <Link to="/consulting/book-free-call">
+                  Book Your Strategy Session
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+              </Button>
+              <Button variant="outline" size="lg" className="bg-white text-orange-600 hover:bg-gray-100 text-lg px-8 py-3">
+                <Eye className="mr-2 w-5 h-5" />
+                View Sample Reports
+              </Button>
+            </div>
           </div>
         </div>
       </section>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -217,15 +216,15 @@ const ComplianceDocs = () => {
               and penalties in global markets.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-3">
+              <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
                 <Link to="/consulting/book-free-call">
-                  Get Compliance Support
+                  Schedule Compliance Consultation
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-3" onClick={handleViewSampleDocs}>
+              <Button variant="outline" size="lg" className="text-gray-700 text-lg px-8 py-3" onClick={handleViewSampleDocs}>
                 <Eye className="mr-2 w-5 h-5" />
-                View Sample Documents
+                View Sample Reports
               </Button>
             </div>
             
@@ -488,12 +487,18 @@ const ComplianceDocs = () => {
             <p className="text-xl text-blue-100 mb-8">
               Don't let compliance issues derail your export success. Get expert guidance today.
             </p>
-            <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
-              <Link to="/consulting/book-free-call">
-                Schedule Compliance Consultation
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
+                <Link to="/consulting/book-free-call">
+                  Schedule Compliance Consultation
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+              </Button>
+              <Button variant="outline" size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3" onClick={handleViewSampleDocs}>
+                <Eye className="mr-2 w-5 h-5" />
+                View Sample Reports
+              </Button>
+            </div>
           </div>
         </div>
       </section>

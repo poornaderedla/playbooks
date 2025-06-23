@@ -12,7 +12,7 @@ import {
   DollarSign,
   Clock,
   Star,
-  Download
+  Eye
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { downloadPDFReport } from '@/utils/downloadUtils';
@@ -97,13 +97,13 @@ const ExportReadiness = () => {
       {/* Breadcrumb */}
       <div className="bg-gray-50 py-4">
         <div className="container mx-auto px-4">
-          <nav className="text-sm text-gray-600">
+          {/* <nav className="text-sm text-gray-600">
             <Link to="/" className="hover:text-blue-600">Home</Link>
             <span className="mx-2">/</span>
             <Link to="/consulting" className="hover:text-blue-600">Consulting</Link>
             <span className="mx-2">/</span>
             <span className="text-gray-900">Export Readiness Audit</span>
-          </nav>
+          </nav> */}
         </div>
       </div>
 
@@ -122,13 +122,15 @@ const ExportReadiness = () => {
               Identify compliance gaps, optimize pricing, and accelerate your export journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                Book Export Audit Call
-                <ArrowRight className="ml-2 w-5 h-5" />
+              <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700">
+                <Link to="/consulting/book-free-call">
+                  Book Export Audit Call
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
               </Button>
               <Button variant="outline" size="lg" onClick={handleDownloadSampleReport}>
-                <Download className="mr-2 w-5 h-5" />
-                Download Sample Report
+                <Eye className="mr-2 w-5 h-5" />
+                view Sample Report
               </Button>
             </div>
           </div>
@@ -310,7 +312,7 @@ const ExportReadiness = () => {
               </blockquote>
               <div className="border-t pt-6">
                 <div className="font-semibold text-lg">Priya Sharma</div>
-                <div className="text-gray-600">Founder, Ayurveda Essentials</div>
+                {/* <div className="text-gray-600">Founder, Ayurveda Essentials</div> */}
                 <div className="text-blue-600 font-medium mt-1">🇩🇪 Exporting to Germany, Netherlands, France</div>
               </div>
             </CardContent>
@@ -326,13 +328,20 @@ const ExportReadiness = () => {
             Book your Export Readiness Audit today and take the first step towards successful global expansion.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
-              Book Export Audit Call
-              <ArrowRight className="ml-2 w-5 h-5" />
+            <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+              <Link to="/consulting/book-free-call">
+                Book Export Audit Call
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
             </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600" onClick={handleDownloadSampleReport}>
-              <Download className="mr-2 w-5 h-5" />
-              Download Checklist
+            <Button 
+              size="lg" 
+              className="bg-white text-blue-600 hover:bg-gray-100"
+              // className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-blue-600 transition-colors" 
+              onClick={handleDownloadSampleReport}
+            >
+              <Eye className="mr-2 w-5 h-5" />
+              View Sample Report
             </Button>
           </div>
           <p className="text-sm mt-6 opacity-75">
@@ -343,9 +352,11 @@ const ExportReadiness = () => {
 
       {/* Sticky CTA - Mobile */}
       <div className="fixed bottom-4 left-4 right-4 md:hidden z-50">
-        <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white shadow-lg">
-          Book Export Audit
-          <ArrowRight className="ml-2 w-4 h-4" />
+        <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white shadow-lg">
+          <Link to="/consulting/book-free-call">
+            Book Export Audit
+            <ArrowRight className="ml-2 w-4 h-4" />
+          </Link>
         </Button>
       </div>
     </div>
