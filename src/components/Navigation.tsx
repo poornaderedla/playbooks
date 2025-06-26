@@ -15,6 +15,8 @@ import { cn } from '@/lib/utils';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
+  let resourcesTimeout: NodeJS.Timeout | null = null;
   const location = useLocation();
 
   const consultingServices = [
@@ -57,6 +59,16 @@ const Navigation = () => {
       title: "Export Strategy Sessions",
       description: "1-on-1 mentorship with export experts",
       href: "/consulting/export-strategy-sessions"
+    },
+    {
+      title: "Export Kickstart Package",
+      description: "Get started with your export journey",
+      href: "/export-kickstart-package"
+    },
+    {
+      title: "First Shipment Handholding",
+      description: "Assistance with your first shipment",
+      href: "/first-shipment-handholding"
     }
   ];
 
@@ -94,7 +106,7 @@ const Navigation = () => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="flex items-center justify-center w-8 h-8 bg-blue-600 rounded-md">
+            <div className="flex items-center justify-center w-8 h-8 bg-primary-600 rounded-md">
               <Globe className="w-5 h-5 text-white" />
             </div>
             <span className="font-bold text-xl">EXIM Pro</span>
@@ -113,9 +125,7 @@ const Navigation = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className={cn(
-                  isConsultingActive && "bg-accent text-accent-foreground"
-                )}>
+                <NavigationMenuTrigger>
                   Consulting
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className="left-1/2 -translate-x-1/2 absolute z-50 w-[95vw] min-w-[900px] max-w-5xl bg-white border rounded-lg shadow-lg overflow-visible">
@@ -123,14 +133,14 @@ const Navigation = () => {
                     <li className="col-span-1 flex flex-col h-full">
                       <NavigationMenuLink asChild>
                         <Link
-                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-blue-500 to-green-500 p-6 no-underline outline-none focus:shadow-md"
+                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-primary-600 p-6 no-underline outline-none focus:shadow-md"
                           to="/consulting"
                         >
                           <Globe className="h-6 w-6 text-white" />
-                          <div className="mb-2 mt-4 text-lg font-medium text-white">
+                          <div className="text-white font-medium text-lg mb-2 mt-4">
                             EXIM Consulting
                           </div>
-                          <p className="text-sm leading-tight text-white/90">
+                          <p className="text-sm leading-tight text-white">
                             AI-powered consulting services for exporters and global trade professionals.
                           </p>
                         </Link>
@@ -152,16 +162,7 @@ const Navigation = () => {
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <Link to="/blog" className={cn(
-                  "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50",
-                  location.pathname === '/blog' && "bg-accent text-accent-foreground"
-                )}>
-                  Blog
-                </Link>
-              </NavigationMenuItem>
-
+              
               <NavigationMenuItem>
                 <Link to="/about" className={cn(
                   "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50",
@@ -170,7 +171,88 @@ const Navigation = () => {
                   About
                 </Link>
               </NavigationMenuItem>
+              <NavigationMenuItem>
+                <div
+                  className="relative"
+                  onMouseEnter={() => {
+                    if (resourcesTimeout) clearTimeout(resourcesTimeout);
+                    setIsResourcesOpen(true);
+                  }}
+                  onMouseLeave={() => {
+                    resourcesTimeout = setTimeout(() => setIsResourcesOpen(false), 100);
+                  }}
+                  onFocus={() => setIsResourcesOpen(true)}
+                  onBlur={() => setIsResourcesOpen(false)}
+                >
+                  <button
+                    type="button"
+                    className={cn(
+                      "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50",
+                      location.pathname.startsWith('/resources') && "bg-accent text-accent-foreground"
+                    )}
+                    onClick={() => setIsResourcesOpen((open) => !open)}
+                    aria-haspopup="true"
+                    aria-expanded={isResourcesOpen}
+                  >
+                    Resources
+                    <svg
+                      className={cn(
+                        "ml-1 w-3 h-3 transition-transform duration-200",
+                        isResourcesOpen ? "rotate-180" : "rotate-0"
+                      )}
+                      viewBox="0 0 10 6"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </button>
+                  {isResourcesOpen && (
+                    <div
+                      className="absolute left-0 top-full z-50 mt-2 min-w-[180px] bg-white border rounded-lg shadow-lg overflow-visible"
+                      onMouseEnter={() => {
+                        if (resourcesTimeout) clearTimeout(resourcesTimeout);
+                        setIsResourcesOpen(true);
+                      }}
+                      onMouseLeave={() => {
+                        resourcesTimeout = setTimeout(() => setIsResourcesOpen(false), 100);
+                      }}
+                    >
+                      <ul className="flex flex-col p-2">
+                        <li>
+                          <Link
+                            to="/resources/calculators"
+                            className="block px-4 py-2 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors"
+                            onClick={() => setIsResourcesOpen(false)}
+                          >
+                            Calculators
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/resources/playbooks"
+                            className="block px-4 py-2 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors"
+                            onClick={() => setIsResourcesOpen(false)}
+                          >
+                            Playbooks
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/resources/blogs"
+                            className="block px-4 py-2 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors"
+                            onClick={() => setIsResourcesOpen(false)}
+                          >
+                            Blogs
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              </NavigationMenuItem>
 
+              
               <NavigationMenuItem>
                 <Link to="/contact" className={cn(
                   "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50",
@@ -193,7 +275,7 @@ const Navigation = () => {
 
           {/* CTA Button - Desktop */}
           <div className="hidden lg:flex">
-            <Button asChild className="bg-blue-600 hover:bg-blue-700">
+            <Button asChild>
               <Link to="/consulting/book-free-call">
                 Book Free Call
                 <ArrowRight className="ml-2 w-4 h-4" />
@@ -231,7 +313,7 @@ const Navigation = () => {
                       <Link
                         key={service.href}
                         to={service.href}
-                        className="block text-sm text-gray-600 hover:text-blue-600 transition-colors"
+                        className="block text-sm text-gray-600 hover:text-primary-600 transition-colors"
                         onClick={() => setIsOpen(false)}
                       >
                         {service.title}
@@ -240,13 +322,32 @@ const Navigation = () => {
                   </div>
                 </div>
 
-                <Link 
-                  to="/blog" 
-                  className="text-lg font-medium hover:text-blue-600 transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Blog
-                </Link>
+                <div className="space-y-3">
+                  <div className="text-lg font-medium">Resources</div>
+                  <div className="pl-4 flex flex-col space-y-1">
+                    <Link
+                      to="/resources/calculators"
+                      className="block text-sm text-gray-600 hover:text-primary-600 transition-colors"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Calculators
+                    </Link>
+                    <Link
+                      to="/resources/playbooks"
+                      className="block text-sm text-gray-600 hover:text-primary-600 transition-colors"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Playbooks
+                    </Link>
+                    <Link
+                      to="/resources/blogs"
+                      className="block text-sm text-gray-600 hover:text-primary-600 transition-colors"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Blogs
+                    </Link>
+                  </div>
+                </div>
 
                 <Link 
                   to="/about" 
@@ -273,7 +374,7 @@ const Navigation = () => {
                 </Link>
 
                 <div className="pt-6">
-                  <Button asChild className="w-full bg-blue-600 hover:bg-blue-700">
+                  <Button asChild className="w-full">
                     <Link to="/consulting/book-free-call" onClick={() => setIsOpen(false)}>
                       Book Free Call
                       <ArrowRight className="ml-2 w-4 h-4" />

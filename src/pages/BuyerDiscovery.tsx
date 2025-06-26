@@ -143,23 +143,23 @@ const BuyerDiscovery = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-purple-50 py-20">
+      <section className="bg-gradient-to-br from-primary-100 to-primary-200 py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="inline-flex items-center bg-primary-100 text-primary-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Star className="w-4 h-4 mr-2" />
               AI-Powered Buyer Discovery
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Find Global Buyers for Your Products in 
-              <span className="text-blue-600"> 48 Hours</span>
+              <span className="text-primary-600"> 48 Hours</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
               Our AI technology scans millions of trade records to find verified international buyers 
               actively purchasing products like yours. No more cold calling or endless searching.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-3">
+              <Button asChild size="lg" className="bg-primary-600 hover:bg-primary-700 text-lg px-8 py-3">
                 <Link to="/consulting/book-free-call">
                   Start Buyer Discovery
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -173,15 +173,15 @@ const BuyerDiscovery = () => {
             
             <div className="flex items-center justify-center space-x-8 mt-12 text-sm text-gray-600">
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-green-500" />
+                <CheckCircle className="w-5 h-5 text-primary-500" />
                 <span>48-hour delivery</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-green-500" />
+                <CheckCircle className="w-5 h-5 text-primary-500" />
                 <span>Verified contacts</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-green-500" />
+                <CheckCircle className="w-5 h-5 text-primary-500" />
                 <span>25+ countries</span>
               </div>
             </div>
@@ -206,8 +206,8 @@ const BuyerDiscovery = () => {
               {features.map((feature, index) => (
                 <Card key={index} className="text-center hover:shadow-lg transition-shadow">
                   <CardHeader>
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mx-auto mb-4">
-                      <feature.icon className="w-8 h-8 text-blue-600" />
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-100 rounded-full mx-auto mb-4">
+                      <feature.icon className="w-8 h-8 text-primary-600" />
                     </div>
                     <CardTitle className="text-lg">{feature.title}</CardTitle>
                   </CardHeader>
@@ -222,7 +222,7 @@ const BuyerDiscovery = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-primary-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -238,7 +238,7 @@ const BuyerDiscovery = () => {
               {process.map((step, index) => (
                 <div key={index} className="relative">
                   <div className="text-center">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600 text-white rounded-full text-xl font-bold mb-6">
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-600 text-white rounded-full text-xl font-bold mb-6">
                       {step.step}
                     </div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-4">{step.title}</h3>
@@ -266,8 +266,8 @@ const BuyerDiscovery = () => {
                 <h2 className="text-3xl font-bold text-gray-900 mb-8">Industries We Cover</h2>
                 <div className="grid grid-cols-2 gap-4">
                   {industries.map((industry, index) => (
-                    <div key={index} className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                    <div key={index} className="flex items-center space-x-3 p-3 bg-primary-50 rounded-lg">
+                      <CheckCircle className="w-5 h-5 text-primary-500 flex-shrink-0" />
                       <span className="text-gray-700">{industry}</span>
                     </div>
                   ))}
@@ -279,9 +279,9 @@ const BuyerDiscovery = () => {
                 <h2 className="text-3xl font-bold text-gray-900 mb-8">Top Buyer Markets</h2>
                 <div className="space-y-4">
                   {countries.map((country, index) => (
-                    <div key={index} className="flex justify-between items-center p-4 bg-gray-50 rounded-lg">
+                    <div key={index} className="flex justify-between items-center p-4 bg-primary-50 rounded-lg">
                       <span className="font-medium text-gray-900">{country.name}</span>
-                      <span className="text-blue-600 font-semibold">{country.buyers}</span>
+                      <span className="text-primary-600 font-semibold">{country.buyers}</span>
                     </div>
                   ))}
                 </div>
@@ -292,7 +292,7 @@ const BuyerDiscovery = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-blue-50">
+      <section className="py-20 bg-primary-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -308,7 +308,7 @@ const BuyerDiscovery = () => {
                   <CardHeader>
                     <div className="flex items-center space-x-1 mb-2">
                       {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                        <Star key={i} className="w-4 h-4 fill-accent-400 text-accent-400" />
                       ))}
                     </div>
                     <CardDescription className="text-gray-600">
@@ -339,15 +339,15 @@ const BuyerDiscovery = () => {
             
             <div className="grid md:grid-cols-3 gap-8">
               {packages.map((pkg, index) => (
-                <Card key={index} className={`relative ${pkg.popular ? 'border-blue-500 border-2' : ''}`}>
+                <Card key={index} className={`relative ${pkg.popular ? 'border-primary-500 border-2' : ''}`}>
                   {pkg.popular && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary-500 text-white px-4 py-1 rounded-full text-sm font-medium">
                       Most Popular
                     </div>
                   )}
                   <CardHeader className="text-center">
                     <CardTitle className="text-2xl">{pkg.name}</CardTitle>
-                    <div className="text-3xl font-bold text-blue-600 mt-4">
+                    <div className="text-3xl font-bold text-primary-600 mt-4">
                       {pkg.price}
                       <span className="text-sm text-gray-500 font-normal">/{pkg.period}</span>
                     </div>
@@ -356,14 +356,14 @@ const BuyerDiscovery = () => {
                     <ul className="space-y-3 mb-8">
                       {pkg.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center space-x-3">
-                          <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                          <CheckCircle className="w-5 h-5 text-primary-500 flex-shrink-0" />
                           <span className="text-gray-600">{feature}</span>
                         </li>
                       ))}
                     </ul>
                     <Button 
                       asChild 
-                      className={`w-full ${pkg.popular ? 'bg-blue-600 hover:bg-blue-700' : ''}`}
+                      className={`w-full ${pkg.popular ? 'bg-primary-600 hover:bg-primary-700' : ''}`}
                       variant={pkg.popular ? 'default' : 'outline'}
                     >
                       <Link to="/consulting/book-free-call">
@@ -379,16 +379,16 @@ const BuyerDiscovery = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600 text-white">
+      <section className="py-20 bg-primary-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Find Your Global Buyers?
           </h2>
-          <p className="text-xl mb-8 text-blue-100">
+          <p className="text-xl mb-8 text-primary-100">
             Join hundreds of exporters who've discovered new markets with our AI-powered buyer discovery.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
+            <Button asChild size="lg" className="bg-white text-primary-600 hover:bg-primary-100 text-lg px-8 py-3">
               <Link to="/consulting/book-free-call">
                 Start Discovery Process
                 <ArrowRight className="ml-2 w-5 h-5" />

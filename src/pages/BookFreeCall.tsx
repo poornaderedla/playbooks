@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -155,16 +154,16 @@ const BookFreeCall = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-green-50 py-20">
+      <section className="bg-gradient-to-br from-primary-100 to-primary-200 py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="inline-flex items-center bg-primary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Calendar className="w-4 h-4 mr-2" />
               Free Export Consultation
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Book Your Free 
-              <span className="text-blue-600"> Export Strategy Call</span>
+              <span className="text-primary-600"> Export Strategy Call</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
               Get expert guidance on taking your products global. Our consultants will assess your export readiness, 
@@ -173,15 +172,15 @@ const BookFreeCall = () => {
             
             <div className="flex items-center justify-center space-x-8 mb-8 text-sm text-gray-600">
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-green-500" />
+                <CheckCircle className="w-5 h-5 text-primary-500" />
                 <span>100% Free consultation</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-green-500" />
+                <CheckCircle className="w-5 h-5 text-primary-500" />
                 <span>Expert export advice</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-green-500" />
+                <CheckCircle className="w-5 h-5 text-primary-500" />
                 <span>Personalized roadmap</span>
               </div>
             </div>
@@ -295,7 +294,7 @@ const BookFreeCall = () => {
                   </select>
                 </div>
 
-                <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-3">
+                <Button type="submit" className="w-full bg-primary-600 hover:bg-primary-700 text-lg py-3">
                   Book My Free Consultation
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
@@ -320,11 +319,11 @@ const BookFreeCall = () => {
               {callTypes.map((type, index) => (
                 <Card key={index} className="text-center hover:shadow-lg transition-shadow">
                   <CardHeader>
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mx-auto mb-4">
-                      <type.icon className="w-8 h-8 text-blue-600" />
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-100 rounded-full mx-auto mb-4">
+                      <type.icon className="w-8 h-8 text-primary-600" />
                     </div>
                     <CardTitle className="text-xl">{type.title}</CardTitle>
-                    <CardDescription className="text-blue-600 font-medium">{type.duration}</CardDescription>
+                    <CardDescription className="text-primary-600 font-medium">{type.duration}</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-600">{type.description}</p>
@@ -337,7 +336,7 @@ const BookFreeCall = () => {
       </section>
 
       {/* What to Expect */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-primary-100">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -350,14 +349,14 @@ const BookFreeCall = () => {
             <div className="space-y-6">
               {whatToExpect.map((item, index) => (
                 <div key={index} className="flex items-center space-x-6 bg-white p-6 rounded-lg shadow-sm">
-                  <div className="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">
+                  <div className="flex-shrink-0 w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold">
                     {index + 1}
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h3>
                     <p className="text-gray-600">{item.description}</p>
                   </div>
-                  <div className="text-sm text-blue-600 font-medium bg-blue-100 px-3 py-1 rounded-full">
+                  <div className="text-sm text-primary-600 font-medium bg-primary-100 px-3 py-1 rounded-full">
                     {item.duration}
                   </div>
                 </div>
@@ -381,8 +380,8 @@ const BookFreeCall = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-6">
-                    <benefit.icon className="w-8 h-8 text-green-600" />
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-100 rounded-full mb-6">
+                    <benefit.icon className="w-8 h-8 text-primary-600" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">{benefit.title}</h3>
                   <p className="text-gray-600">{benefit.description}</p>
@@ -394,7 +393,7 @@ const BookFreeCall = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-blue-50">
+      <section className="py-20 bg-primary-100">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -419,8 +418,8 @@ const BookFreeCall = () => {
                         <div className="text-sm text-gray-600">{testimonial.company}</div>
                       </div>
                       <div className="text-right">
-                        <div className="text-sm text-blue-600 font-medium">Result</div>
-                        <div className="text-sm font-bold text-blue-700">{testimonial.result}</div>
+                        <div className="text-sm text-primary-600 font-medium">Result</div>
+                        <div className="text-sm font-bold text-primary-700">{testimonial.result}</div>
                       </div>
                     </div>
                   </CardContent>
@@ -459,26 +458,26 @@ const BookFreeCall = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-blue-600 text-white">
+      <section className="py-20 bg-primary-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Start Your Export Journey?
           </h2>
-          <p className="text-xl mb-8 text-blue-100">
+          <p className="text-xl mb-8 text-primary-100">
             Book your free consultation now and take the first step toward global success.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
+            <Button size="lg" className="bg-white text-primary-600 hover:bg-primary-100 text-lg px-8 py-3">
               Book Free Call Now
               <Calendar className="ml-2 w-5 h-5" />
             </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-3">
+            <Button variant="outline" size="lg" className="bg-white text-primary-600 hover:bg-primary-100 text-lg px-8 py-3">
               <Phone className="mr-2 w-5 h-5" />
               Call +91 98765 43210
             </Button>
           </div>
           
-          <div className="mt-8 text-blue-100">
+          <div className="mt-8 text-primary-100">
             <p className="text-sm">Available Monday-Friday, 9 AM - 6 PM IST</p>
           </div>
         </div>

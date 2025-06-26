@@ -193,16 +193,16 @@ const GlobalSellerDiscovery = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-50 to-blue-50 py-20">
+      <section className="bg-gradient-to-br from-primary-100 to-primary-200 py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="inline-flex items-center bg-primary-100 text-primary-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Globe className="w-4 h-4 mr-2" />
               Global Supplier Network
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Find Verified Global Suppliers & Manufacturers in 
-              <span className="text-green-600"> 96 Hours</span>
+              <span className="text-primary-600"> 96 Hours</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
               Access our worldwide network of verified suppliers across 50+ countries. 
@@ -210,7 +210,7 @@ const GlobalSellerDiscovery = () => {
               international partners for your sourcing needs with comprehensive risk assessment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-green-600 hover:bg-green-700 text-lg px-8 py-3">
+              <Button asChild size="lg" className="bg-primary-600 hover:bg-primary-700 text-lg px-8 py-3">
                 <Link to="/consulting/book-free-call">
                   Find Global Suppliers
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -224,15 +224,15 @@ const GlobalSellerDiscovery = () => {
             
             <div className="flex items-center justify-center space-x-8 mt-12 text-sm text-gray-600">
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-green-500" />
+                <CheckCircle className="w-5 h-5 text-primary-500" />
                 <span>50+ countries</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-green-500" />
+                <CheckCircle className="w-5 h-5 text-primary-500" />
                 <span>35,000+ suppliers</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-green-500" />
+                <CheckCircle className="w-5 h-5 text-primary-500" />
                 <span>Risk-assessed partners</span>
               </div>
             </div>
@@ -257,8 +257,8 @@ const GlobalSellerDiscovery = () => {
               {features.map((feature, index) => (
                 <Card key={index} className="text-center hover:shadow-lg transition-shadow">
                   <CardHeader>
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mx-auto mb-4">
-                      <feature.icon className="w-8 h-8 text-green-600" />
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-100 rounded-full mx-auto mb-4">
+                      <feature.icon className="w-8 h-8 text-primary-600" />
                     </div>
                     <CardTitle className="text-lg">{feature.title}</CardTitle>
                   </CardHeader>
@@ -289,7 +289,7 @@ const GlobalSellerDiscovery = () => {
               {process.map((step, index) => (
                 <div key={index} className="relative">
                   <div className="text-center">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-green-600 text-white rounded-full text-xl font-bold mb-6">
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-600 text-white rounded-full text-xl font-bold mb-6">
                       {step.step}
                     </div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-4">{step.title}</h3>
@@ -320,19 +320,19 @@ const GlobalSellerDiscovery = () => {
             
             <div className="grid md:grid-cols-2 gap-8">
               {supplierRegions.map((region, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow border-l-4 border-l-green-600">
+                <Card key={index} className="hover:shadow-lg transition-shadow border-l-4 border-l-primary-600">
                   <CardHeader>
                     <div className="flex justify-between items-start">
                       <div>
                         <CardTitle className="text-xl flex items-center">
-                          <MapPin className="w-6 h-6 text-green-600 mr-3" />
+                          <MapPin className="w-6 h-6 text-primary-600 mr-3" />
                           {region.region}
                         </CardTitle>
                         <CardDescription className="mt-2 text-gray-600">
                           {region.countries}
                         </CardDescription>
                       </div>
-                      <span className="text-green-600 font-bold text-lg">{region.count}</span>
+                      <span className="text-primary-600 font-bold text-lg">{region.count}</span>
                     </div>
                   </CardHeader>
                   <CardContent>
@@ -349,7 +349,7 @@ const GlobalSellerDiscovery = () => {
       </section>
 
       {/* Industries & Trading Blocs */}
-      <section className="py-20 bg-green-50">
+      <section className="py-20 bg-primary-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-16">
@@ -359,7 +359,7 @@ const GlobalSellerDiscovery = () => {
                 <div className="grid grid-cols-1 gap-4">
                   {industries.map((industry, index) => (
                     <div key={index} className="flex items-center space-x-3 p-4 bg-white rounded-lg shadow-sm">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-primary-500 flex-shrink-0" />
                       <span className="text-gray-700 font-medium">{industry}</span>
                     </div>
                   ))}
@@ -405,8 +405,8 @@ const GlobalSellerDiscovery = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {verificationStandards.map((standard, index) => (
                 <Card key={index} className="bg-gray-50 text-center p-6">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-green-100 rounded-full mb-4">
-                    <CheckCircle className="w-6 h-6 text-green-600" />
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-primary-100 rounded-full mb-4">
+                    <CheckCircle className="w-6 h-6 text-primary-600" />
                   </div>
                   <h3 className="font-semibold text-gray-900 text-sm">{standard}</h3>
                 </Card>
@@ -464,15 +464,15 @@ const GlobalSellerDiscovery = () => {
             
             <div className="grid md:grid-cols-3 gap-8">
               {packages.map((pkg, index) => (
-                <Card key={index} className={`relative ${pkg.popular ? 'border-green-500 border-2' : ''}`}>
+                <Card key={index} className={`relative ${pkg.popular ? 'border-primary-500 border-2' : ''}`}>
                   {pkg.popular && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary-500 text-white px-4 py-1 rounded-full text-sm font-medium">
                       Most Popular
                     </div>
                   )}
                   <CardHeader className="text-center">
                     <CardTitle className="text-2xl">{pkg.name}</CardTitle>
-                    <div className="text-3xl font-bold text-green-600 mt-4">
+                    <div className="text-3xl font-bold text-primary-600 mt-4">
                       {pkg.price}
                       <span className="text-sm text-gray-500 font-normal">/{pkg.period}</span>
                     </div>
@@ -481,14 +481,14 @@ const GlobalSellerDiscovery = () => {
                     <ul className="space-y-3 mb-8">
                       {pkg.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center space-x-3">
-                          <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                          <CheckCircle className="w-5 h-5 text-primary-500 flex-shrink-0" />
                           <span className="text-gray-600">{feature}</span>
                         </li>
                       ))}
                     </ul>
                     <Button 
                       asChild 
-                      className={`w-full ${pkg.popular ? 'bg-green-600 hover:bg-green-700' : ''}`}
+                      className={`w-full ${pkg.popular ? 'bg-primary-600 hover:bg-primary-700' : ''}`}
                       variant={pkg.popular ? 'default' : 'outline'}
                     >
                       <Link to="/consulting/book-free-call">
@@ -504,22 +504,22 @@ const GlobalSellerDiscovery = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-green-600 text-white">
+      <section className="py-20 bg-primary-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Explore Global Suppliers?
           </h2>
-          <p className="text-xl mb-8 text-green-100">
+          <p className="text-xl mb-8 text-primary-100">
             Join thousands of businesses sourcing globally with confidence through our verified supplier network.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-white text-green-600 hover:bg-gray-100">
+            <Button asChild size="lg" className="bg-white text-primary-600 hover:bg-gray-100">
               <Link to="/consulting/book-free-call">
                 Start Global Search
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
-            <Button variant="outline" size="lg" className="bg-white text-green-600 hover:bg-gray-100" onClick={handleViewSampleProfiles}>
+            <Button variant="outline" size="lg" className="bg-white text-primary-600 hover:bg-gray-100" onClick={handleViewSampleProfiles}>
               <Eye className="mr-2 w-5 h-5" />
               View Sample Reports
             </Button>

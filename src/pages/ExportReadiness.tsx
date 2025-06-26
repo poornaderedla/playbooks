@@ -31,7 +31,7 @@ const ExportReadiness = () => {
         "Product category compliance requirements",
         "Import duty calculations for target markets"
       ],
-      icon: <FileCheck className="w-6 h-6 text-blue-600" />
+      icon: <FileCheck className="w-6 h-6 text-primary-600" />
     },
     {
       category: "Regulatory Requirements", 
@@ -40,7 +40,7 @@ const ExportReadiness = () => {
         "Country-specific regulations and standards",
         "Quality control and testing requirements"
       ],
-      icon: <Shield className="w-6 h-6 text-green-600" />
+      icon: <Shield className="w-6 h-6 text-accent-500" />
     },
     {
       category: "Packaging & Labeling",
@@ -49,7 +49,7 @@ const ExportReadiness = () => {
         "Labeling requirements for each market",
         "Shelf life and storage guidelines"
       ],
-      icon: <Package className="w-6 h-6 text-purple-600" />
+      icon: <Package className="w-6 h-6 text-secondary-600" />
     },
     {
       category: "Pricing Analysis",
@@ -58,7 +58,7 @@ const ExportReadiness = () => {
         "Cost optimization opportunities",
         "Competitive pricing strategy"
       ],
-      icon: <DollarSign className="w-6 h-6 text-orange-600" />
+      icon: <DollarSign className="w-6 h-6 text-accent-600" />
     }
   ];
 
@@ -95,7 +95,7 @@ const ExportReadiness = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Breadcrumb */}
-      <div className="bg-gray-50 py-4">
+      <div className="bg-primary-100 py-4">
         <div className="container mx-auto px-4">
           {/* <nav className="text-sm text-gray-600">
             <Link to="/" className="hover:text-blue-600">Home</Link>
@@ -108,21 +108,21 @@ const ExportReadiness = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-br from-blue-50 to-white">
+      <section className="py-16 bg-gradient-to-br from-primary-100 to-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-6 bg-blue-100 text-blue-800">
+            <Badge className="mb-6 bg-primary-100 text-primary-800">
               Export Readiness Assessment
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Is Your Product <span className="text-blue-600">Global-Ready</span>?
+              Is Your Product <span className="text-primary-600">Global-Ready</span>?
             </h1>
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
               Comprehensive audit to assess your product's readiness for international markets. 
               Identify compliance gaps, optimize pricing, and accelerate your export journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700">
+              <Button asChild size="lg" className="bg-primary-600 hover:bg-primary-700">
                 <Link to="/consulting/book-free-call">
                   Book Export Audit Call
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -144,7 +144,7 @@ const ExportReadiness = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-bold mb-6">The Hidden Costs of Being Unprepared</h2>
-                <div className="space-y-4 text-gray-600">
+                <div className="space-y-4 text-muted-foreground">
                   <div className="flex items-start">
                     <div className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                     <p>72% of first-time exporters face compliance issues that delay shipments</p>
@@ -163,14 +163,14 @@ const ExportReadiness = () => {
                   </div>
                 </div>
               </div>
-              <div className="bg-gradient-to-br from-blue-50 to-green-50 p-8 rounded-2xl">
+              <div className="bg-gradient-to-br from-primary-100 to-accent-50 p-8 rounded-2xl">
                 <h3 className="text-2xl font-bold mb-4 text-center">Our Solution</h3>
-                <p className="text-gray-700 text-center mb-6">
+                <p className="text-foreground text-center mb-6">
                   Comprehensive Export Readiness Audit that identifies and resolves these issues before they become costly problems.
                 </p>
                 <div className="flex justify-center">
-                  <div className="bg-green-100 p-4 rounded-full">
-                    <CheckCircle className="w-12 h-12 text-green-600" />
+                  <div className="bg-accent-100 p-4 rounded-full">
+                    <CheckCircle className="w-12 h-12 text-accent-600" />
                   </div>
                 </div>
               </div>
@@ -180,12 +180,12 @@ const ExportReadiness = () => {
       </section>
 
       {/* What's Included */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-primary-100">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">What Our Export Audit Includes</h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-muted-foreground">
                 Thorough assessment across all critical export readiness dimensions
               </p>
             </div>
@@ -201,8 +201,8 @@ const ExportReadiness = () => {
                     <div className="space-y-3">
                       {category.items.map((item, idx) => (
                         <div key={idx} className="flex items-start">
-                          <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                          <span className="text-gray-700">{item}</span>
+                          <CheckCircle className="w-5 h-5 text-accent-500 mr-3 mt-0.5 flex-shrink-0" />
+                          <span className="text-foreground">{item}</span>
                         </div>
                       ))}
                     </div>
@@ -219,14 +219,14 @@ const ExportReadiness = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Why Export Readiness Matters</h2>
-            <p className="text-xl text-gray-600 mb-12">
+            <p className="text-xl text-muted-foreground mb-12">
               Get global-ready with confidence and avoid costly mistakes
             </p>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center p-4 bg-gradient-to-r from-blue-50 to-green-50 rounded-lg">
-                  <CheckCircle className="w-6 h-6 text-green-600 mr-3 flex-shrink-0" />
+                <div key={index} className="flex items-center p-4 bg-gradient-to-r from-primary-100 to-accent-50 rounded-lg">
+                  <CheckCircle className="w-6 h-6 text-accent-600 mr-3 flex-shrink-0" />
                   <span className="font-medium">{benefit}</span>
                 </div>
               ))}
@@ -236,12 +236,12 @@ const ExportReadiness = () => {
       </section>
 
       {/* Use Cases */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-primary-100">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Real-World Success Stories</h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-muted-foreground">
                 How our Export Readiness Audit has helped businesses like yours
               </p>
             </div>
@@ -252,13 +252,13 @@ const ExportReadiness = () => {
                   <CardContent className="p-6">
                     <div className="text-4xl mb-4 text-center">{useCase.icon}</div>
                     <h3 className="font-semibold mb-3 text-center">Challenge</h3>
-                    <p className="text-gray-600 mb-4 text-sm leading-relaxed">{useCase.scenario}</p>
+                    <p className="text-foreground mb-4 text-sm leading-relaxed">{useCase.scenario}</p>
                     
-                    <h4 className="font-semibold mb-2 text-blue-600">Our Solution</h4>
-                    <p className="text-gray-700 mb-4 text-sm">{useCase.solution}</p>
+                    <h4 className="font-semibold mb-2 text-primary-600">Our Solution</h4>
+                    <p className="text-foreground mb-4 text-sm">{useCase.solution}</p>
                     
-                    <h4 className="font-semibold mb-2 text-green-600">Result</h4>
-                    <p className="text-gray-700 text-sm">{useCase.outcome}</p>
+                    <h4 className="font-semibold mb-2 text-accent-600">Result</h4>
+                    <p className="text-foreground text-sm">{useCase.outcome}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -281,15 +281,15 @@ const ExportReadiness = () => {
                 { step: "4", title: "Report Delivery", duration: "Day 8-10", description: "Comprehensive findings and action plan" }
               ].map((phase, index) => (
                 <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                  <div className="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
                     {phase.step}
                   </div>
                   <h3 className="font-semibold mb-2">{phase.title}</h3>
-                  <div className="text-sm text-blue-600 mb-2 flex items-center justify-center">
+                  <div className="text-sm text-primary-600 mb-2 flex items-center justify-center">
                     <Clock className="w-4 h-4 mr-1" />
                     {phase.duration}
                   </div>
-                  <p className="text-gray-600 text-sm">{phase.description}</p>
+                  <p className="text-muted-foreground text-sm">{phase.description}</p>
                 </div>
               ))}
             </div>
@@ -298,7 +298,7 @@ const ExportReadiness = () => {
       </section>
 
       {/* Testimonial */}
-      <section className="py-16 bg-gradient-to-r from-blue-50 to-green-50">
+      <section className="py-16 bg-gradient-to-r from-primary-100 to-accent-50">
         <div className="container mx-auto px-4">
           <Card className="max-w-4xl mx-auto border-0 shadow-lg">
             <CardContent className="p-8 text-center">
@@ -307,13 +307,13 @@ const ExportReadiness = () => {
                   <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
                 ))}
               </div>
-              <blockquote className="text-xl text-gray-700 mb-6 italic leading-relaxed">
+              <blockquote className="text-xl text-foreground mb-6 italic leading-relaxed">
                 "The export readiness audit was a game-changer for our business. They identified compliance issues we never knew existed and helped us avoid what could have been a ₹3 lakh mistake. Now we're confidently exporting to 3 EU countries."
               </blockquote>
               <div className="border-t pt-6">
                 <div className="font-semibold text-lg">Priya Sharma</div>
                 {/* <div className="text-gray-600">Founder, Ayurveda Essentials</div> */}
-                <div className="text-blue-600 font-medium mt-1">🇩🇪 Exporting to Germany, Netherlands, France</div>
+                <div className="text-primary-600 font-medium mt-1">🇩🇪 Exporting to Germany, Netherlands, France</div>
               </div>
             </CardContent>
           </Card>
@@ -321,14 +321,14 @@ const ExportReadiness = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-green-600 text-white">
+      <section className="py-16 bg-gradient-to-r from-primary-600 to-accent-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Get Export-Ready?</h2>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
             Book your Export Readiness Audit today and take the first step towards successful global expansion.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+            <Button asChild size="lg" className="bg-white text-primary-600 hover:bg-primary-100">
               <Link to="/consulting/book-free-call">
                 Book Export Audit Call
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -336,7 +336,7 @@ const ExportReadiness = () => {
             </Button>
             <Button 
               size="lg" 
-              className="bg-white text-blue-600 hover:bg-gray-100"
+              className="bg-white text-primary-600 hover:bg-primary-100"
               // className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-blue-600 transition-colors" 
               onClick={handleDownloadSampleReport}
             >
@@ -352,7 +352,7 @@ const ExportReadiness = () => {
 
       {/* Sticky CTA - Mobile */}
       <div className="fixed bottom-4 left-4 right-4 md:hidden z-50">
-        <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white shadow-lg">
+        <Button asChild className="w-full bg-primary-600 hover:bg-primary-700 text-white shadow-lg">
           <Link to="/consulting/book-free-call">
             Book Export Audit
             <ArrowRight className="ml-2 w-4 h-4" />

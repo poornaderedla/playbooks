@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -40,7 +39,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Visit Us",
-      details: "Chhatrapati SambhajiNagar, Maharashtra 431001",
+      details: "Chhatrapati Sambhajinagar, Maharashtra 431001",
       description: "Schedule an in-person meeting"
     },
     {
@@ -100,13 +99,13 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-green-50 py-20">
+      <section className="bg-gradient-to-br from-primary-100 to-primary-200 py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Get in Touch
             </h1>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-xl text-muted-foreground mb-8">
               Ready to expand your business globally? Our export consultants are here to help you 
               navigate international markets and grow your exports.
             </p>
@@ -121,14 +120,14 @@ const Contact = () => {
             {contactInfo.map((info, index) => (
               <Card key={index} className="text-center hover:shadow-lg transition-shadow">
                 <CardHeader>
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mx-auto mb-4">
-                    <info.icon className="w-8 h-8 text-blue-600" />
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-100 rounded-full mx-auto mb-4">
+                    <info.icon className="w-8 h-8 text-primary-600" />
                   </div>
                   <CardTitle className="text-lg">{info.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="font-semibold text-gray-900 mb-2">{info.details}</p>
-                  <p className="text-sm text-gray-600">{info.description}</p>
+                  <p className="font-semibold text-foreground mb-2">{info.details}</p>
+                  <p className="text-sm text-muted-foreground">{info.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -137,17 +136,17 @@ const Contact = () => {
       </section>
 
       {/* Contact Form and Quick Actions */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Contact Form */}
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
+                <h2 className="text-3xl font-bold text-foreground mb-6">Send Us a Message</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-secondary-foreground mb-2">
                         Full Name *
                       </label>
                       <Input
@@ -158,7 +157,7 @@ const Contact = () => {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-secondary-foreground mb-2">
                         Email Address *
                       </label>
                       <Input
@@ -173,7 +172,7 @@ const Contact = () => {
                   
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-secondary-foreground mb-2">
                         Company Name
                       </label>
                       <Input
@@ -183,7 +182,7 @@ const Contact = () => {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-secondary-foreground mb-2">
                         Phone Number
                       </label>
                       <Input
@@ -195,7 +194,7 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-secondary-foreground mb-2">
                       Country/Market of Interest
                     </label>
                     <Input
@@ -206,7 +205,7 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-secondary-foreground mb-2">
                       Service Interest
                     </label>
                     <select 
@@ -226,7 +225,7 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-secondary-foreground mb-2">
                       Message
                     </label>
                     <textarea
@@ -237,7 +236,7 @@ const Contact = () => {
                     />
                   </div>
 
-                  <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700">
+                  <Button type="submit" className="w-full bg-primary-600 hover:bg-primary-700">
                     Send Message
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
@@ -247,14 +246,14 @@ const Contact = () => {
               {/* Quick Actions & Info */}
               <div className="space-y-8">
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Actions</h3>
+                  <h3 className="text-2xl font-bold text-foreground mb-6">Quick Actions</h3>
                   <div className="space-y-4">
                     <Card className="p-6">
                       <div className="flex items-center space-x-4">
-                        <Clock className="w-8 h-8 text-blue-600" />
+                        <Clock className="w-8 h-8 text-primary-600" />
                         <div className="flex-1">
                           <h4 className="font-semibold">Book a Free Call</h4>
-                          <p className="text-sm text-gray-600">15-minute consultation call</p>
+                          <p className="text-sm text-muted-foreground">15-minute consultation call</p>
                         </div>
                         <Button asChild size="sm">
                           <Link to="/consulting/book-free-call">Book Now</Link>
@@ -264,10 +263,10 @@ const Contact = () => {
 
                     <Card className="p-6">
                       <div className="flex items-center space-x-4">
-                        <CheckCircle className="w-8 h-8 text-green-600" />
+                        <CheckCircle className="w-8 h-8 text-primary-600" />
                         <div className="flex-1">
                           <h4 className="font-semibold">Export Readiness Check</h4>
-                          <p className="text-sm text-gray-600">Quick product assessment</p>
+                          <p className="text-sm text-muted-foreground">Quick product assessment</p>
                         </div>
                         <Button asChild variant="outline" size="sm">
                           <Link to="/consulting/export-readiness">Start Check</Link>
@@ -277,10 +276,10 @@ const Contact = () => {
 
                     <Card className="p-6">
                       <div className="flex items-center space-x-4">
-                        <Globe className="w-8 h-8 text-purple-600" />
+                        <Globe className="w-8 h-8 text-primary-600" />
                         <div className="flex-1">
                           <h4 className="font-semibold">Market Research</h4>
-                          <p className="text-sm text-gray-600">Country-specific insights</p>
+                          <p className="text-sm text-muted-foreground">Country-specific insights</p>
                         </div>
                         <Button asChild variant="outline" size="sm">
                           <Link to="/consulting/market-research">Learn More</Link>
@@ -291,9 +290,9 @@ const Contact = () => {
                 </div>
 
                 {/* Response Time */}
-                <Card className="p-6 bg-blue-50 border-blue-200">
-                  <h4 className="font-semibold text-blue-900 mb-2">Our Response Commitment</h4>
-                  <ul className="space-y-2 text-sm text-blue-800">
+                <Card className="p-6 bg-primary-100 border-primary-200">
+                  <h4 className="font-semibold text-foreground mb-2">Our Response Commitment</h4>
+                  <ul className="space-y-2 text-sm text-primary-800">
                     <li className="flex items-center space-x-2">
                       <CheckCircle className="w-4 h-4" />
                       <span>Email responses within 24 hours</span>
@@ -318,36 +317,36 @@ const Contact = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Global Presence</h2>
-              <p className="text-xl text-gray-600">
+            {/* <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-foreground mb-4">Our Global Presence</h2>
+              <p className="text-xl text-muted-foreground">
                 Serving clients across continents with local expertise
               </p>
-            </div>
+            </div> */}
 
             <div className="grid md:grid-cols-3 gap-8">
               {offices.map((office, index) => (
-                <Card key={index} className={`relative ${office.isHQ ? 'border-blue-500 border-2' : ''}`}>
+                <Card key={index} className={`relative ${office.isHQ ? 'border-primary-500 border-2' : ''}`}>
                   {office.isHQ && (
-                    <div className="absolute -top-3 left-4 bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+                    <div className="absolute -top-3 left-4 bg-primary-500 text-white px-3 py-1 rounded-full text-xs font-medium">
                       Headquarters
                     </div>
                   )}
                   <CardHeader>
                     <CardTitle className="flex items-center space-x-2">
-                      <MapPin className="w-5 h-5 text-blue-600" />
+                      <MapPin className="w-5 h-5 text-primary-600" />
                       <span>{office.city}, {office.country}</span>
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-3">
-                    <p className="text-gray-600">{office.address}</p>
+                    <p className="text-muted-foreground">{office.address}</p>
                     <div className="space-y-2">
                       <div className="flex items-center space-x-2">
-                        <Phone className="w-4 h-4 text-gray-400" />
+                        <Phone className="w-4 h-4 text-accent-400" />
                         <span className="text-sm">{office.phone}</span>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <Mail className="w-4 h-4 text-gray-400" />
+                        <Mail className="w-4 h-4 text-accent-400" />
                         <span className="text-sm">{office.email}</span>
                       </div>
                     </div>
@@ -360,12 +359,12 @@ const Contact = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-              <p className="text-xl text-gray-600">
+              <h2 className="text-3xl font-bold text-foreground mb-4">Frequently Asked Questions</h2>
+              <p className="text-xl text-muted-foreground">
                 Quick answers to common questions about our services
               </p>
             </div>
@@ -377,7 +376,7 @@ const Contact = () => {
                     <CardTitle className="text-lg">{faq.question}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600">{faq.answer}</p>
+                    <p className="text-muted-foreground">{faq.answer}</p>
                   </CardContent>
                 </Card>
               ))}

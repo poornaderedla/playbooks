@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -22,6 +21,8 @@ import ExportStrategySessions from "./pages/ExportStrategySessions";
 import Login from "./pages/Login";
 import BookFreeCall from "./pages/BookFreeCall";
 import NotFound from "./pages/NotFound";
+import ExportKickstartPackage from "./pages/ExportKickstartPackge";
+import FirstShipmentHandholding from "./pages/FirstShipmentHandholding";
 
 const queryClient = new QueryClient();
 
@@ -39,6 +40,7 @@ const App = () => (
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/resources/blogs" element={<Blog />} />
               <Route path="/login" element={<Login />} />
               <Route path="/consulting" element={<Consulting />} />
               <Route path="/consulting/export-readiness" element={<ExportReadiness />} />
@@ -50,6 +52,8 @@ const App = () => (
               <Route path="/consulting/pricing-strategy" element={<PricingStrategy />} />
               <Route path="/consulting/export-strategy-sessions" element={<ExportStrategySessions />} />
               <Route path="/consulting/book-free-call" element={<BookFreeCall />} />
+              <Route path="/export-kickstart-package" element={<ExportKickstartPackage />} />
+              <Route path="/first-shipment-handholding" element={<FirstShipmentHandholding />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

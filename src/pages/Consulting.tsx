@@ -21,14 +21,14 @@ const Consulting = () => {
     {
       title: "Export Readiness Audit",
       description: "Complete assessment of your product's global readiness - from compliance to pricing.",
-      icon: <FileCheck className="w-8 h-8 text-blue-600" />,
+      icon: <FileCheck className="w-8 h-8 text-primary-600" />,
       slug: "export-readiness",
       features: ["HS Code Classification", "Regulatory Check", "Packaging Review"]
     },
     {
       title: "Market Research & Country Selection",
       description: "Data-driven insights to identify your most profitable export markets.",
-      icon: <Search className="w-8 h-8 text-green-600" />,
+      icon: <Search className="w-8 h-8 text-accent-400" />,
       slug: "market-research",
       features: ["Market Analysis", "Competition Study", "Entry Strategy"]
     },
@@ -111,21 +111,21 @@ const Consulting = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-50 via-white to-green-50 py-20">
+      <section className="relative bg-gradient-to-br from-primary-100 via-white to-primary-200 py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-6 bg-blue-100 text-blue-800 hover:bg-blue-100">
+            <Badge className="mb-6 bg-primary-100 text-primary-800 hover:bg-primary-100">
               AI-Powered EXIM Consulting
             </Badge>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary-600 to-primary-600 bg-clip-text text-transparent">
               Export Smarter. Scale Faster.
             </h1>
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+            <p className="text-xl text-foreground mb-8 leading-relaxed">
               AI-Powered EXIM Consulting for Indian Exporters & Global Buyers. 
               Navigate international trade with confidence and accelerate your global growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3">
+              <Button asChild size="lg" className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3">
                 <Link to="/consulting/book-free-call">   
                   Book Free Discovery Call
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -143,8 +143,8 @@ const Consulting = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl font-bold text-blue-600">{stat.value}</div>
-                <div className="text-sm text-gray-600">{stat.label}</div>
+                <div className="text-3xl font-bold text-primary-600">{stat.value}</div>
+                <div className="text-sm text-muted-foreground">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -156,26 +156,26 @@ const Consulting = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-4xl font-bold mb-6">A Startup Built for Global Trade</h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-muted-foreground">
               Founded in 2023 with innovation and agility at our core
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <div className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-blue-600" />
+              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <TrendingUp className="w-8 h-8 text-primary-600" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Tech-Forward Approach</h3>
-              <p className="text-gray-600">Combining AI tools with personalized advisory for smarter export decisions.</p>
+              <p className="text-muted-foreground">Combining AI tools with personalized advisory for smarter export decisions.</p>
             </div>
             
             <div className="text-center p-6">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-green-600" />
+              <div className="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-accent-400" />
               </div>
               <h3 className="text-xl font-semibold mb-3">SME Focused</h3>
-              <p className="text-gray-600">Accessible pricing and tailored solutions for first-time exporters and growing businesses.</p>
+              <p className="text-muted-foreground">Accessible pricing and tailored solutions for first-time exporters and growing businesses.</p>
             </div>
             
             <div className="text-center p-6">
@@ -183,18 +183,18 @@ const Consulting = () => {
                 <Globe className="w-8 h-8 text-purple-600" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Global Reach</h3>
-              <p className="text-gray-600">Trusted by clients exporting to 12+ countries across US, EU, UAE, and Asia.</p>
+              <p className="text-muted-foreground">Trusted by clients exporting to 12+ countries across US, EU, UAE, and Asia.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-primary-100">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-4xl font-bold mb-6">Our EXIM Consulting Services</h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-muted-foreground">
               Comprehensive solutions to accelerate your global trade journey
             </p>
           </div>
@@ -204,22 +204,22 @@ const Consulting = () => {
               <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-0 shadow-md">
                 <CardContent className="p-6">
                   <div className="mb-4">{service.icon}</div>
-                  <h3 className="text-xl font-semibold mb-3 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-xl font-semibold mb-3 group-hover:text-primary-600 transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
+                  <p className="text-muted-foreground mb-4 leading-relaxed">
                     {service.description}
                   </p>
                   <div className="space-y-2 mb-6">
                     {service.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center text-sm text-gray-500">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                      <div key={idx} className="flex items-center text-sm text-primary-500">
+                        <CheckCircle className="w-4 h-4 text-accent-500 mr-2" />
                         {feature}
                       </div>
                     ))}
                   </div>
                   <Link to={`/consulting/${service.slug}`}>
-                    <Button variant="outline" className="w-full group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                    <Button variant="outline" className="w-full group-hover:bg-primary-600 group-hover:text-white transition-colors">
                       Learn More
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Button>
@@ -236,7 +236,7 @@ const Consulting = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-4xl font-bold mb-6">Our 3-Step Process</h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-muted-foreground">
               Simple, structured approach to export success
             </p>
           </div>
@@ -244,14 +244,14 @@ const Consulting = () => {
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {processSteps.map((step, index) => (
               <div key={index} className="text-center relative">
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-500 rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-2xl font-bold text-white">{step.step}</span>
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{step.description}</p>
+                <p className="text-muted-foreground leading-relaxed">{step.description}</p>
                 
                 {index < processSteps.length - 1 && (
-                  <div className="hidden md:block absolute top-10 left-1/2 w-full h-0.5 bg-gradient-to-r from-blue-200 to-green-200 z-0" 
+                  <div className="hidden md:block absolute top-10 left-1/2 w-full h-0.5 bg-gradient-to-r from-primary-200 to-primary-200 z-0" 
                        style={{ transform: 'translateX(10px)', width: 'calc(100% - 20px)' }} />
                 )}
               </div>
@@ -261,11 +261,11 @@ const Consulting = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-gradient-to-r from-blue-50 to-green-50">
+      <section className="py-20 bg-gradient-to-r from-primary-100 to-primary-200">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-4xl font-bold mb-6">Trusted by Global Exporters</h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-muted-foreground">
               Real stories from businesses we've helped scale globally
             </p>
           </div>
@@ -279,13 +279,13 @@ const Consulting = () => {
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <blockquote className="text-gray-700 mb-4 italic leading-relaxed">
+                  <blockquote className="text-foreground mb-4 italic leading-relaxed">
                     "{testimonial.quote}"
                   </blockquote>
                   <div className="border-t pt-4">
                     <div className="font-semibold">{testimonial.author}</div>
-                    <div className="text-sm text-gray-600">{testimonial.company}</div>
-                    <div className="text-sm font-medium text-blue-600 mt-1">{testimonial.country}</div>
+                    <div className="text-sm text-muted-foreground">{testimonial.company}</div>
+                    <div className="text-sm font-medium text-primary-600 mt-1">{testimonial.country}</div>
                   </div>
                 </CardContent>
               </Card>
@@ -295,20 +295,20 @@ const Consulting = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-green-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-primary-600 to-primary-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Scale Your Exports?</h2>
           <p className="text-xl mb-8 opacity-90">
             Book a free 15-minute discovery call and let's discuss your global trade goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3">
+            <Button asChild size="lg" className="bg-white text-primary-600 hover:bg-primary-100 px-8 py-3">
               <Link to="/consulting/book-free-call">
                 Book Free Discovery Call
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
-            {/* <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3">
+            {/* <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary-600 px-8 py-3">
               View Case Studies
             </Button> */}
           </div>
@@ -317,7 +317,7 @@ const Consulting = () => {
 
       {/* Sticky CTA - Mobile */}
       <div className="fixed bottom-4 left-4 right-4 md:hidden z-50">
-        <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white shadow-lg">
+        <Button className="w-full bg-primary-600 hover:bg-primary-700 text-white shadow-lg">
           Book Free Call
           <ArrowRight className="ml-2 w-4 h-4" />
         </Button>
