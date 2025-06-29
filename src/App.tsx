@@ -21,7 +21,7 @@ import ExportStrategySessions from "./pages/ExportStrategySessions";
 import Login from "./pages/Login";
 import BookFreeCall from "./pages/BookFreeCall";
 import NotFound from "./pages/NotFound";
-import ExportKickstartPackage from "./pages/ExportKickstartPackge";
+import ExportKickstartPackge from "./pages/ExportKickstartPackge";
 import FirstShipmentHandholding from "./pages/FirstShipmentHandholding";
 import Calculators from "./pages/Calculators";
 import TradewiseCalculator from "./calc/tradewise/pages/Calculator";
@@ -58,7 +58,7 @@ const App = () => (
               <Route path="/consulting/pricing-strategy" element={<PricingStrategy />} />
               <Route path="/consulting/export-strategy-sessions" element={<ExportStrategySessions />} />
               <Route path="/consulting/book-free-call" element={<BookFreeCall />} />
-              <Route path="/export-kickstart-package" element={<ExportKickstartPackage />} />
+              <Route path="/export-kickstart-package" element={<ExportKickstartPackge />} />
               <Route path="/first-shipment-handholding" element={<FirstShipmentHandholding />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />

@@ -16,7 +16,7 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const ExportKickstartPackage = () => {
+const ExportKickstartPackge = () => {
   const packageIncludes = [
     {
       title: "IEC (Import Export Code) Registration",
@@ -234,4 +234,4 @@ const ExportKickstartPackage = () => {
   );
 };
 
-export default ExportKickstartPackage;
+export default ExportKickstartPackge;
