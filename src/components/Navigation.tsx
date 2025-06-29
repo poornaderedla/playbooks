@@ -239,7 +239,7 @@ const Navigation = () => {
                         </li>
                         <li>
                           <Link
-                            to="/resources/blogs"
+                            to="/blog"
                             className="block px-4 py-2 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors"
                             onClick={() => setIsResourcesOpen(false)}
                           >
@@ -339,8 +339,9 @@ const Navigation = () => {
                     >
                       Playbooks
                     </Link>
-                <Link 
-                      to="/resources/blogs"
+
+                    <Link
+                      to="/blog"
                       className="block text-sm text-gray-600 hover:text-primary-600 transition-colors"
                   onClick={() => setIsOpen(false)}
                 >

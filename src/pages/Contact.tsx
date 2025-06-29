@@ -16,11 +16,48 @@ const Contact = () => {
     serviceInterest: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [submitting, setSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
-    // In a real app, this would send to your backend
+    setSubmitting(true);
+    setSubmitSuccess(false);
+    setSubmitError('');
+    try {
+      const response = await fetch('/api/contact/submit-form', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          fullName: formData.name,
+          email: formData.email,
+          company: formData.company,
+          phone: formData.phone,
+          country: formData.country,
+          serviceInterest: formData.serviceInterest,
+          message: formData.message,
+        }),
+      });
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.message || 'Failed to submit form');
+      }
+      setSubmitSuccess(true);
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        country: '',
+        message: '',
+        serviceInterest: ''
+      });
+    } catch (error) {
+      setSubmitError(error instanceof Error ? error.message : 'Failed to submit form');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -235,6 +272,10 @@ const Contact = () => {
                       placeholder="Tell us about your export goals and how we can help..."
                     />
                   </div>
+
+                  {submitting && <div className="text-sm text-gray-500 mb-2">Sending...</div>}
+                  {submitSuccess && <div className="text-green-600 mb-2">Thank you! Your message has been sent.</div>}
+                  {submitError && <div className="text-red-600 mb-2">{submitError}</div>}
 
                   <Button type="submit" className="w-full bg-primary-600 hover:bg-primary-700">
                     Send Message
