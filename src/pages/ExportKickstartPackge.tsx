@@ -84,8 +84,10 @@ const ExportKickstartPackage = () => {
                 Get Started Today
                 <ArrowRight className="ml-2 w-6 h-6" />
               </Button>
-              <Button variant="outline" size="lg" className="px-8 py-4 text-lg text-primary-600 border-primary-600">
-                Book Consultation
+              <Button asChild variant="outline" size="lg" className="px-8 py-4 text-lg text-primary-600 border-primary-600">
+                <Link to="/consulting/book-free-call">
+                  Book Consultation
+                </Link>
               </Button>
             </div>
             
@@ -167,7 +169,7 @@ const ExportKickstartPackage = () => {
               { step: "04", title: "Market Report", desc: "Deliver target market analysis and next steps" }
             ].map((item, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-xl font-bold text-white">{item.step}</span>
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
@@ -220,8 +222,10 @@ const ExportKickstartPackage = () => {
               Start Your Package
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            <Button variant="outline" size="lg" className="bg-white text-primary-600 hover:bg-primary-100 px-8 py-3">
-              Schedule Consultation
+            <Button asChild variant="outline" size="lg" className="bg-white text-primary-600 hover:bg-primary-100 px-8 py-3">
+              <Link to="/consulting/book-free-call">
+                Book  Consultation
+              </Link>
             </Button>
           </div>
         </div>

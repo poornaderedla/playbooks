@@ -23,6 +23,9 @@ import BookFreeCall from "./pages/BookFreeCall";
 import NotFound from "./pages/NotFound";
 import ExportKickstartPackage from "./pages/ExportKickstartPackge";
 import FirstShipmentHandholding from "./pages/FirstShipmentHandholding";
+import Calculators from "./pages/Calculators";
+import TradewiseCalculator from "./calc/tradewise/pages/Calculator";
+import LandCostCalculator from "./calc/landcostcalc/pages/Index";
 
 const queryClient = new QueryClient();
 
@@ -41,6 +44,9 @@ const App = () => (
               <Route path="/contact" element={<Contact />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/resources/blogs" element={<Blog />} />
+              <Route path="/resources/calculators" element={<Calculators />} />
+              <Route path="/resources/calculators/incoterms" element={<TradewiseCalculator />} />
+              <Route path="/resources/calculators/tlc" element={<LandCostCalculator />} />
               <Route path="/login" element={<Login />} />
               <Route path="/consulting" element={<Consulting />} />
               <Route path="/consulting/export-readiness" element={<ExportReadiness />} />

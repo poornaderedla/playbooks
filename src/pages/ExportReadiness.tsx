@@ -321,7 +321,7 @@ const ExportReadiness = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-primary-600 to-accent-600 text-white">
+      <section className="py-16 bg-primary-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Get Export-Ready?</h2>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
@@ -337,7 +337,6 @@ const ExportReadiness = () => {
             <Button 
               size="lg" 
               className="bg-white text-primary-600 hover:bg-primary-100"
-              // className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-blue-600 transition-colors" 
               onClick={handleDownloadSampleReport}
             >
               <Eye className="mr-2 w-5 h-5" />
