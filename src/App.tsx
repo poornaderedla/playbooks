@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
+import BlogDetail from "./pages/BlogDetail";
 import Consulting from "./pages/Consulting";
 import ExportReadiness from "./pages/ExportReadiness";
 import MarketResearch from "./pages/MarketResearch";
@@ -23,6 +24,9 @@ import BookFreeCall from "./pages/BookFreeCall";
 import NotFound from "./pages/NotFound";
 import ExportKickstartPackage from "./pages/ExportKickstartPackge";
 import FirstShipmentHandholding from "./pages/FirstShipmentHandholding";
+import Admin from "./pages/Admin";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 
 const queryClient = new QueryClient();
 
@@ -40,6 +44,8 @@ const App = () => (
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogDetail />} />
+              <Route path="/admin" element={<Admin />} />
               <Route path="/resources/blogs" element={<Blog />} />
               <Route path="/login" element={<Login />} />
               <Route path="/consulting" element={<Consulting />} />
@@ -54,6 +60,8 @@ const App = () => (
               <Route path="/consulting/book-free-call" element={<BookFreeCall />} />
               <Route path="/export-kickstart-package" element={<ExportKickstartPackage />} />
               <Route path="/first-shipment-handholding" element={<FirstShipmentHandholding />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

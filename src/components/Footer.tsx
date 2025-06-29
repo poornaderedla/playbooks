@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Globe, Mail, Phone, MapPin, Facebook, Twitter,
@@ -15,6 +15,11 @@ const XLogo = (props) => (
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+
+  // Newsletter state
+  const [footerEmail, setFooterEmail] = useState('');
+  const [footerLoading, setFooterLoading] = useState(false);
+  const [footerMsg, setFooterMsg] = useState('');
 
   const consultingServices = [
     { name: "Export Readiness Audit", href: "/consulting/export-readiness" },
@@ -43,19 +48,35 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { name: "YouTube", icon: Youtube, href: "https://youtube.com/eximproindia" },
-    { name: "X", icon: XLogo, href: "https://twitter.com/eximproindia" },
-    { name: "Instagram", icon: Instagram, href: "https://instagram.com/eximproindia" },
+    { name: "YouTube", icon: Youtube, href: "http://www.youtube.com/@DrehillPrivateLimited" },
+    { name: "X", icon: XLogo, href: "https://x.com/Drehill_in?t=thzAWR-_sWvRnkRqZSXpCA&s=08" },
+    { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/drehill.in?igsh=MW81aDVvcWs2cHVoZg==" },
     { name: "LinkedIn", icon: (props) => (
       <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" {...props}>
         <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.271c-.966 0-1.5-.723-1.5-1.229 0-.506.546-1.229 1.5-1.229s1.5.723 1.5 1.229c0 .506-.534 1.229-1.5 1.229zm13.5 10.271h-3v-4.845c0-1.152-.414-1.938-1.448-1.938-.79 0-1.261.531-1.47 1.043-.075.183-.094.438-.094.692v5.048h-3v-9h3v1.229c.397-.612 1.104-1.48 2.686-1.48 1.963 0 3.414 1.281 3.414 4.038v5.213z" />
       </svg>
-    ), href: "https://linkedin.com/company/eximproindia" }
+    ), href: "https://www.linkedin.com/company/drehill/" }
   ];
 
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
+  const handleNewsletterSubmit = async (e) => {
     e.preventDefault();
-    console.log('Newsletter subscription');
+    setFooterLoading(true);
+    setFooterMsg('');
+    try {
+      const res = await fetch('/api/contact/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: footerEmail })
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.message || 'Failed to subscribe');
+      setFooterMsg('Subscribed! Check your inbox for updates.');
+      setFooterEmail('');
+    } catch (err) {
+      setFooterMsg(err.message || 'Failed to subscribe');
+    } finally {
+      setFooterLoading(false);
+    }
   };
 
   return (
@@ -153,12 +174,18 @@ const Footer = () => {
                 placeholder="Enter your email"
                 className="flex-1 bg-white text-gray-900"
                 required
+                value={footerEmail}
+                onChange={e => setFooterEmail(e.target.value)}
+                disabled={footerLoading}
               />
-              <Button type="submit" className="bg-primary-600 hover:bg-primary-700">
-                Subscribe
+              <Button type="submit" className="bg-primary-600 hover:bg-primary-700" disabled={footerLoading || !footerEmail}>
+                {footerLoading ? 'Subscribing...' : 'Subscribe'}
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </form>
+            {footerMsg && (
+              <div aria-live="polite" className={`text-xs mt-1 ${footerMsg.startsWith('Subscribed') ? 'text-green-600' : 'text-red-600'}`}>{footerMsg}</div>
+            )}
           </div>
         </div>
       </div>
@@ -175,6 +202,11 @@ const Footer = () => {
                 key={index}
                 to={link.href}
                 className="text-black-400 text-xs transition-transform transform hover:scale-110 duration-200"
+                onClick={
+                  link.href === "/privacy" || link.href === "/terms"
+                    ? () => window.scrollTo({ top: 0, behavior: "smooth" })
+                    : undefined
+                }
               >
                 {link.name}
               </Link>
