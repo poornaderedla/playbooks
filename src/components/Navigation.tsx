@@ -162,7 +162,7 @@ const Navigation = () => {
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
-              
+
               <NavigationMenuItem>
                 <Link to="/about" className={cn(
                   "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50",
@@ -187,7 +187,7 @@ const Navigation = () => {
                   <button
                     type="button"
                     className={cn(
-                      "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50",
+                  "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50",
                       location.pathname.startsWith('/resources') && "bg-accent text-accent-foreground"
                     )}
                     onClick={() => setIsResourcesOpen((open) => !open)}
@@ -244,7 +244,7 @@ const Navigation = () => {
                             onClick={() => setIsResourcesOpen(false)}
                           >
                             Blogs
-                          </Link>
+                </Link>
                         </li>
                       </ul>
                     </div>
@@ -339,13 +339,14 @@ const Navigation = () => {
                     >
                       Playbooks
                     </Link>
+
                     <Link
                       to="/blog"
                       className="block text-sm text-gray-600 hover:text-primary-600 transition-colors"
-                      onClick={() => setIsOpen(false)}
-                    >
+                  onClick={() => setIsOpen(false)}
+                >
                       Blogs
-                    </Link>
+                </Link>
                   </div>
                 </div>
 

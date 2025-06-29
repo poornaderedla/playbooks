@@ -120,8 +120,10 @@ const FirstShipmentHandholding = () => {
                 Start Your First Export
                 <ArrowRight className="ml-2 w-6 h-6" />
               </Button>
-              <Button variant="outline" size="lg" className="px-8 py-4 text-lg text-primary-600 border-primary-600">
-                Schedule Discussion
+              <Button asChild variant="outline" size="lg" className="px-8 py-4 text-lg text-primary-600 border-primary-600">
+                <Link to="/consulting/book-free-call">
+                  Schedule Discussion
+                </Link>
               </Button>
             </div>
             
@@ -183,7 +185,7 @@ const FirstShipmentHandholding = () => {
               <Card key={index} className="border-0 shadow-lg bg-white">
                 <CardContent className="p-6">
                   <div className="text-center mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <div className="w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-3">
                       <span className="text-white font-bold">{index + 1}</span>
                     </div>
                     <h3 className="text-xl font-semibold text-primary-600">{phase.phase}</h3>
@@ -211,7 +213,7 @@ const FirstShipmentHandholding = () => {
             <div className="grid md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center bg-accent-50 p-4 rounded-lg">
-                  <CheckCircle className="w-6 h-6 text-accent-600 mr-4 flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-primary-600 mr-4 flex-shrink-0" />
                   <span className="text-lg text-primary-700">{benefit}</span>
                 </div>
               ))}
@@ -270,8 +272,10 @@ const FirstShipmentHandholding = () => {
               Start Your First Export
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            <Button variant="outline" size="lg" className="bg-white text-primary-600 hover:bg-primary-100 px-8 py-3">
-              Discuss Your Requirements
+            <Button asChild variant="outline" size="lg" className="bg-white text-primary-600 hover:bg-primary-100 px-8 py-3">
+              <Link to="/consulting/book-free-call">
+                Schedule Discussion 
+              </Link>
             </Button>
           </div>
         </div>

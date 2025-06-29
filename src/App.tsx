@@ -22,11 +22,15 @@ import ExportStrategySessions from "./pages/ExportStrategySessions";
 import Login from "./pages/Login";
 import BookFreeCall from "./pages/BookFreeCall";
 import NotFound from "./pages/NotFound";
-import ExportKickstartPackage from "./pages/ExportKickstartPackge";
+import ExportKickstartPackge from "./pages/ExportKickstartPackge";
 import FirstShipmentHandholding from "./pages/FirstShipmentHandholding";
 import Admin from "./pages/Admin";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
+import Calculators from "./pages/Calculators";
+import TradewiseCalculator from "./calc/tradewise/pages/Calculator";
+import LandCostCalculator from "./calc/landcostcalc/pages/Index";
+
 
 const queryClient = new QueryClient();
 
@@ -47,6 +51,9 @@ const App = () => (
               <Route path="/blog/:slug" element={<BlogDetail />} />
               <Route path="/admin" element={<Admin />} />
               <Route path="/resources/blogs" element={<Blog />} />
+              <Route path="/resources/calculators" element={<Calculators />} />
+              <Route path="/resources/calculators/incoterms" element={<TradewiseCalculator />} />
+              <Route path="/resources/calculators/tlc" element={<LandCostCalculator />} />
               <Route path="/login" element={<Login />} />
               <Route path="/consulting" element={<Consulting />} />
               <Route path="/consulting/export-readiness" element={<ExportReadiness />} />
@@ -58,7 +65,7 @@ const App = () => (
               <Route path="/consulting/pricing-strategy" element={<PricingStrategy />} />
               <Route path="/consulting/export-strategy-sessions" element={<ExportStrategySessions />} />
               <Route path="/consulting/book-free-call" element={<BookFreeCall />} />
-              <Route path="/export-kickstart-package" element={<ExportKickstartPackage />} />
+              <Route path="/export-kickstart-package" element={<ExportKickstartPackge />} />
               <Route path="/first-shipment-handholding" element={<FirstShipmentHandholding />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />

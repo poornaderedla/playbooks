@@ -231,7 +231,7 @@ const ExportStrategySessions = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-50 to-accent-50 py-20">
+      <section className="bg-gradient-to-br from-primary-100 to-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center bg-primary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -240,7 +240,7 @@ const ExportStrategySessions = () => {
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               1-on-1 Export Strategy
-              <span className="text-accent-600"> Mentorship Sessions</span>
+              <span className="text-primary-600"> Mentorship Sessions</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
               Get personalized guidance from seasoned export professionals. Our experts have 
@@ -248,7 +248,7 @@ const ExportStrategySessions = () => {
               Skip the learning curve and accelerate your export success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-white text-primary-600 hover:bg-gray-100 text-lg px-8 py-3">
+              <Button asChild size="lg" className="bg-primary-600 hover:bg-primary-700 text-white text-lg px-8 py-3">
                 <Link to="/consulting/book-free-call">
                   Book Your Strategy Session
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -262,15 +262,15 @@ const ExportStrategySessions = () => {
             
             <div className="flex items-center justify-center space-x-8 mt-12 text-sm text-gray-600">
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-accent-500" />
+                <CheckCircle className="w-5 h-5 text-primary-600" />
                 <span>Expert consultants</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-accent-500" />
+                <CheckCircle className="w-5 h-5 text-primary-600" />
                 <span>Personalized strategy</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-accent-500" />
+                <CheckCircle className="w-5 h-5 text-primary-600" />
                 <span>Actionable roadmap</span>
               </div>
             </div>
@@ -296,7 +296,7 @@ const ExportStrategySessions = () => {
                 <Card key={index} className="text-center hover:shadow-lg transition-shadow">
                   <CardHeader>
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-100 rounded-full mx-auto mb-4">
-                      <feature.icon className="w-8 h-8 text-accent-600" />
+                      <feature.icon className="w-8 h-8 text-primary-600" />
                     </div>
                     <CardTitle className="text-lg">{feature.title}</CardTitle>
                   </CardHeader>
@@ -311,7 +311,7 @@ const ExportStrategySessions = () => {
       </section>
 
       {/* Session Types */}
-      <section className="py-20 bg-secondary-50">
+      <section className="py-20 bg-primary-100">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -333,7 +333,7 @@ const ExportStrategySessions = () => {
                             <Clock className="w-4 h-4 mr-1" />
                             {session.duration}
                           </span>
-                          <span className="text-accent-600 font-bold text-lg">{session.price}</span>
+                          <span className="text-primary-600 font-bold text-lg">{session.price}</span>
                         </div>
                       </div>
                     </div>
@@ -343,7 +343,7 @@ const ExportStrategySessions = () => {
                     <ul className="space-y-2">
                       {session.includes.map((item, itemIndex) => (
                         <li key={itemIndex} className="flex items-center space-x-2">
-                          <CheckCircle className="w-4 h-4 text-accent-500 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-primary-600 flex-shrink-0" />
                           <span className="text-gray-700 text-sm">{item}</span>
                         </li>
                       ))}
@@ -372,10 +372,10 @@ const ExportStrategySessions = () => {
                 <Card key={index} className="text-center hover:shadow-lg transition-shadow">
                   <CardHeader>
                     <div className="w-20 h-20 bg-primary-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-                      <Users className="w-10 h-10 text-accent-600" />
+                      <Users className="w-10 h-10 text-primary-600" />
                     </div>
                     <CardTitle className="text-xl">{consultant.name}</CardTitle>
-                    <CardDescription className="font-medium text-accent-600">
+                    <CardDescription className="font-medium text-primary-600">
                       {consultant.title}
                     </CardDescription>
                   </CardHeader>
@@ -410,7 +410,7 @@ const ExportStrategySessions = () => {
       </section>
 
       {/* Expertise Areas */}
-      <section className="py-20 bg-accent-50">
+      <section className="py-20 bg-gradient-to-r from-primary-100 to-accent-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -423,7 +423,7 @@ const ExportStrategySessions = () => {
             <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
               {expertiseAreas.map((area, index) => (
                 <div key={index} className="flex items-center space-x-3 p-4 bg-white rounded-lg">
-                  <CheckCircle className="w-5 h-5 text-accent-500 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-primary-600 flex-shrink-0" />
                   <span className="text-gray-700 font-medium">{area}</span>
                 </div>
               ))}
@@ -448,7 +448,7 @@ const ExportStrategySessions = () => {
                 <Card key={index} className="text-center hover:shadow-lg transition-shadow">
                   <CardHeader>
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-100 rounded-full mx-auto mb-4">
-                      <format.icon className="w-8 h-8 text-accent-600" />
+                      <format.icon className="w-8 h-8 text-primary-600" />
                     </div>
                     <CardTitle className="text-xl">{format.format}</CardTitle>
                     <CardDescription>{format.description}</CardDescription>
@@ -464,7 +464,7 @@ const ExportStrategySessions = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-secondary-50">
+      <section className="py-20 bg-primary-100">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -478,7 +478,7 @@ const ExportStrategySessions = () => {
               {process.map((step, index) => (
                 <div key={index} className="relative">
                   <div className="text-center">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-accent-600 text-white rounded-full text-xl font-bold mb-6">
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-600 text-white rounded-full text-xl font-bold mb-6">
                       {step.step}
                     </div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-4">{step.title}</h3>
@@ -523,7 +523,7 @@ const ExportStrategySessions = () => {
                   <CardContent>
                     <div className="font-semibold text-gray-900">{testimonial.name}</div>
                     <div className="text-sm text-gray-600">{testimonial.company}</div>
-                    <div className="text-sm text-accent-600 mt-1">
+                    <div className="text-sm text-primary-600 mt-1">
                       Consultant: {testimonial.consultant}
                     </div>
                   </CardContent>
@@ -535,7 +535,7 @@ const ExportStrategySessions = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-secondary-50">
+      <section className="py-20 bg-gradient-to-r from-primary-100 to-accent-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -547,10 +547,10 @@ const ExportStrategySessions = () => {
             
             <div className="grid md:grid-cols-3 gap-8">
               {packages.map((pkg, index) => (
-                <Card key={index} className={`relative ${pkg.popular ? 'ring-2 ring-accent-500 transform scale-105' : ''}`}>
+                <Card key={index} className={`relative ${pkg.popular ? 'ring-2 ring-primary-500 transform scale-105' : ''}`}>
                   {pkg.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-accent-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                      <span className="bg-primary-500 text-white px-4 py-1 rounded-full text-sm font-medium">
                         Most Popular
                       </span>
                     </div>
@@ -567,14 +567,14 @@ const ExportStrategySessions = () => {
                     <ul className="space-y-3">
                       {pkg.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center space-x-3">
-                          <CheckCircle className="w-5 h-5 text-accent-500 flex-shrink-0" />
+                          <CheckCircle className="w-5 h-5 text-primary-600 flex-shrink-0" />
                           <span className="text-gray-700">{feature}</span>
                         </li>
                       ))}
                     </ul>
                     <Button 
                       asChild 
-                      className={`w-full mt-8 ${pkg.popular ? 'bg-accent-600 hover:bg-accent-700' : ''}`}
+                      className={`w-full mt-8 ${pkg.popular ? 'bg-primary-600 hover:bg-primary-700' : ''}`}
                       variant={pkg.popular ? 'default' : 'outline'}
                     >
                       <Link to="/consulting/book-free-call">
@@ -590,23 +590,26 @@ const ExportStrategySessions = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-accent-600">
+      <section className="py-20 bg-primary-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Accelerate Your Export Success?
             </h2>
-            <p className="text-xl text-accent-100 mb-8">
+            <p className="text-xl text-primary-100 mb-8">
               Don't navigate the complex world of international trade alone. Get expert guidance today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-white text-accent-600 hover:bg-gray-100 text-lg px-8 py-3">
+              <Button asChild size="lg" className="bg-white text-primary-600 hover:bg-primary-100 text-lg px-8 py-3">
                 <Link to="/consulting/book-free-call">
                   Book Your Strategy Session
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="bg-white text-accent-600 hover:bg-gray-100 text-lg px-8 py-3">
+              <Button 
+                size="lg" 
+                className="bg-white text-primary-600 hover:bg-primary-100 text-lg px-8 py-3"
+              >
                 <Eye className="mr-2 w-5 h-5" />
                 View Sample Reports
               </Button>
