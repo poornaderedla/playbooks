@@ -90,7 +90,7 @@ const Footer = () => {
               <div className="flex items-center justify-center w-10 h-10 bg-primary-600 rounded-lg">
                 <Globe className="w-6 h-6 text-white" />
               </div>
-              <span className="font-bold text-2xl">EXIM Pro</span>
+              <span className="font-bold text-2xl">Drehill</span>
             </Link>
             <p className="text-black-300 mb-4 leading-relaxed text-sm">
               Your trusted partner for international trade success. We help businesses
@@ -136,7 +136,7 @@ const Footer = () => {
                 <li key={index}>
                   <Link
                     to={service.href}
-                    className="text-black-300 transition-transform transform hover:scale-110 duration-200"
+                    className="text-black-400 text-xs transition-transform transform hover:scale-110 duration-200"
                   >
                     {service.name}
                   </Link>
@@ -153,7 +153,7 @@ const Footer = () => {
                 <li key={index}>
                   <Link
                     to={link.href}
-                    className="text-black-300 transition-transform transform hover:scale-110 duration-200"
+                    className="text-black-400 text-xs transition-transform transform hover:scale-110 duration-200"
                   >
                     {link.name}
                   </Link>

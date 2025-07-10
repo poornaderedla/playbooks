@@ -102,40 +102,36 @@ const FirstShipmentHandholding = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-100 via-white to-accent-50 py-20">
+      <section className="relative bg-primary-600 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-6 bg-primary-100 text-primary-800 hover:bg-primary-100">
+            <Badge className="mb-6 bg-white text-primary-600 hover:bg-gray-100">
               Complete Export Transaction Management
             </Badge>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-primary-600">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               First Shipment Handholding
             </h1>
-            <p className="text-xl text-primary-600 mb-8 leading-relaxed">
+            <p className="text-xl text-primary-100 mb-8 leading-relaxed">
               End-to-end management of your first export transaction. From order confirmation 
               to payment receipt, we handle everything so you can focus on your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button size="lg" className="bg-primary-600 text-white px-8 py-4 text-lg">
+              <Button size="lg" className="bg-white hover:bg-white text-primary-600 px-8 py-4 text-lg">
                 Start Your First Export
                 <ArrowRight className="ml-2 w-6 h-6" />
               </Button>
-              <Button asChild variant="outline" size="lg" className="px-8 py-4 text-lg text-primary-600 border-primary-600">
-                <Link to="/consulting/book-free-call">
-                  Schedule Discussion
-                </Link>
-              </Button>
+                  {/* <Button asChild variant="outline" size="lg" className="px-8 py-4 text-lg text-primary-600 border-primary-600">
+                    <Link to="/consulting/book-free-call">
+                      Schedule Discussion
+                    </Link>
+                  </Button> */}
             </div>
-            
-            {/* Pricing */}
-            <div className="bg-white rounded-xl shadow-lg p-8 max-w-md mx-auto">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary-600 mb-2">₹1,00,000 - ₹1,50,000</div>
-                <div className="text-gray-600">Per Transaction</div>
-                <div className="text-sm text-accent-600 mt-2">
-                  <Shield className="w-4 h-4 inline mr-1 text-accent-600" />
-                  100% Success Guarantee
-                </div>
+            <div className="text-center mt-8">
+              <div className="text-3xl font-bold text-white mb-2">₹1,00,000 - ₹1,50,000</div>
+              <div className="text-white">Per Transaction</div>
+              <div className="text-sm text-white mt-2 flex items-center justify-center">
+                <Shield className="w-4 h-4 inline mr-1 text-white" />
+                100% Success Guarantee
               </div>
             </div>
           </div>
@@ -272,11 +268,11 @@ const FirstShipmentHandholding = () => {
               Start Your First Export
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            <Button asChild variant="outline" size="lg" className="bg-white text-primary-600 hover:bg-primary-100 px-8 py-3">
+            {/* <Button asChild variant="outline" size="lg" className="bg-white text-primary-600 hover:bg-primary-100 px-8 py-3">
               <Link to="/consulting/book-free-call">
                 Schedule Discussion 
               </Link>
-            </Button>
+            </Button> */}
           </div>
         </div>
       </section>

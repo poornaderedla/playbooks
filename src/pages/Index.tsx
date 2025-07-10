@@ -47,26 +47,26 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-100 via-white to-primary-200 py-20">
+      <section className="relative bg-primary-600 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto text-center">
-            <Badge className="mb-6 bg-primary-100 text-primary-800 hover:bg-primary-100">
+            <Badge className="mb-6 bg-white text-primary-600 hover:bg-gray-100">
               Trusted EXIM Consulting Since 2023
             </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary-600 to-primary-600 bg-clip-text text-transparent leading-tight pb-3 overflow-visible">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white leading-tight pb-3 overflow-visible">
               Scale Your Business Globally
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-primary-100 mb-8 leading-relaxed max-w-4xl mx-auto">
               Expert EXIM consulting for Indian exporters and global buyers. 
               Navigate international trade with confidence and accelerate your growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link to="/consulting">
-                <Button size="lg" className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 text-lg">
-                  Explore Our Services
-                  <ArrowRight className="ml-2 w-6 h-6" />
-                </Button>
-              </Link>
+                              <Link to="/consulting">
+                  <Button size="lg" className="bg-white hover:bg-white text-primary-600 px-8 py-4 text-lg">
+                    Explore Our Services
+                    <ArrowRight className="ml-2 w-6 h-6" />
+                  </Button>
+                </Link>
               <Link to="/consulting/book-free-call">
                 <Button
                   size="lg"
@@ -81,8 +81,8 @@ const Index = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-primary-600">{stat.value}</div>
-                  <div className="text-sm text-muted-foreground">{stat.label}</div>
+                  <div className="text-3xl md:text-4xl font-bold text-white">{stat.value}</div>
+                  <div className="text-sm text-primary-100">{stat.label}</div>
                 </div>
               ))}
             </div>

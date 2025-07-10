@@ -108,30 +108,30 @@ const ExportReadiness = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-br from-primary-100 to-white">
+      <section className="py-16 bg-primary-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-6 bg-primary-100 text-primary-800">
+            <Badge className="mb-6 bg-white text-primary-600 hover:bg-gray-100">
               Export Readiness Assessment
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Is Your Product <span className="text-primary-600">Global-Ready</span>?
+              Is Your Product <span className="text-white">Global-Ready</span>?
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-xl text-primary-100 mb-8 leading-relaxed">
               Comprehensive audit to assess your product's readiness for international markets. 
               Identify compliance gaps, optimize pricing, and accelerate your export journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-primary-600 hover:bg-primary-700">
+              <Button asChild size="lg" className="bg-white hover:bg-white text-primary-600">
                 <Link to="/consulting/book-free-call">
                   Book Export Audit Call
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" onClick={handleDownloadSampleReport}>
+              {/* <Button variant="outline" size="lg" onClick={handleDownloadSampleReport}>
                 <Eye className="mr-2 w-5 h-5" />
                 view Sample Report
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>
@@ -334,14 +334,14 @@ const ExportReadiness = () => {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
-            <Button 
+            {/* <Button 
               size="lg" 
               className="bg-white text-primary-600 hover:bg-primary-100"
               onClick={handleDownloadSampleReport}
             >
               <Eye className="mr-2 w-5 h-5" />
               View Sample Report
-            </Button>
+            </Button> */}
           </div>
           <p className="text-sm mt-6 opacity-75">
             Starting at ₹15,000 | 7-10 business days delivery | 100% satisfaction guarantee
