@@ -20,11 +20,53 @@ const BookFreeCall = () => {
   });
 
   const [currentStep, setCurrentStep] = useState(1);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission - integrate with Calendly or booking system
-    console.log('Booking request:', formData);
+    setSubmitting(true);
+    setSubmitSuccess(false);
+    setSubmitError('');
+    try {
+      const response = await fetch('/api/contact/book-call', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          fullName: formData.name,
+          email: formData.email,
+          company: formData.company,
+          phone: formData.phone,
+          products: formData.products,
+          targetMarkets: formData.targetMarkets,
+          experience: formData.experience,
+          preferredTime: formData.preferredTime
+        }),
+      });
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.message || 'Failed to book call');
+      }
+      setSubmitSuccess(true);
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        industry: '',
+        products: '',
+        targetMarkets: '',
+        experience: '',
+        challenges: '',
+        preferredTime: '',
+        callType: 'video'
+      });
+    } catch (error) {
+      setSubmitError(error instanceof Error ? error.message : 'Failed to book call');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const benefits = [
@@ -294,7 +336,10 @@ const BookFreeCall = () => {
                   </select>
                 </div>
 
-                <Button type="submit" className="w-full bg-primary-600 hover:bg-primary-700 text-lg py-3">
+                {submitting && <div className="text-sm text-gray-500 mb-2">Booking...</div>}
+                {submitSuccess && <div className="text-green-600 mb-2">Thank you! Your call has been booked. We will contact you soon.</div>}
+                {submitError && <div className="text-red-600 mb-2">{submitError}</div>}
+                <Button type="submit" className="w-full bg-primary-600 hover:bg-primary-700 text-lg py-3" disabled={submitting}>
                   Book My Free Consultation
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
