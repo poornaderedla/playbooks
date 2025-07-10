@@ -27,7 +27,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      details: "contact@drehill.com",
+      details: "info@drehill.com",
       description: "Get a response within 24 hours"
     },
     {
@@ -99,13 +99,13 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-100 to-primary-200 py-20">
+      <section className="bg-primary-600 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Get in Touch
             </h1>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl text-primary-100 mb-8">
               Ready to expand your business globally? Our export consultants are here to help you 
               navigate international markets and grow your exports.
             </p>

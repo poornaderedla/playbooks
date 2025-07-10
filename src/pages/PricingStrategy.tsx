@@ -226,46 +226,46 @@ const PricingStrategy = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-100 to-primary-200 py-20">
+      <section className="bg-primary-600 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center bg-primary-100 text-primary-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="inline-flex items-center bg-white text-primary-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <DollarSign className="w-4 h-4 mr-2" />
               Pricing Optimization Experts
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Master Export Pricing &
-              <span className="text-primary-600"> Costing Strategy</span>
+              <span className="text-white"> Costing Strategy</span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-xl text-primary-100 mb-8 leading-relaxed">
               Optimize your export pricing for maximum profitability while staying competitive 
               in global markets. Our data-driven approach ensures you price right from day one, 
               avoiding costly pricing mistakes that derail export success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-white text-primary-600 hover:bg-accent-100 text-lg px-8 py-3">
+              <Button asChild size="lg" className="bg-white hover:bg-white text-primary-600 text-lg px-8 py-3">
                 <Link to="/consulting/book-free-call">
                   Start Pricing Optimization
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="text-secondary-foreground text-lg px-8 py-3" onClick={handleViewSampleAnalysis}>
+              {/* <Button variant="outline" size="lg" className="text-secondary-foreground text-lg px-8 py-3" onClick={handleViewSampleAnalysis}>
                 <Eye className="mr-2 w-5 h-5" />
                 View Sample Reports
-              </Button>
+              </Button> */}
             </div>
             
-            <div className="flex items-center justify-center space-x-8 mt-12 text-sm text-muted-foreground">
+            <div className="flex items-center justify-center space-x-8 mt-12 text-sm text-primary-100">
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-primary-500" />
+                <CheckCircle className="w-5 h-5 text-white" />
                 <span>25+ cost factors analyzed</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-primary-500" />
+                <CheckCircle className="w-5 h-5 text-white" />
                 <span>Market intelligence included</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-primary-500" />
+                <CheckCircle className="w-5 h-5 text-white" />
                 <span>Profit optimization guaranteed</span>
               </div>
             </div>
@@ -429,11 +429,6 @@ const PricingStrategy = () => {
                     <h3 className="text-xl font-semibold text-foreground mb-4">{step.title}</h3>
                     <p className="text-muted-foreground">{step.description}</p>
                   </div>
-                  {index < process.length - 1 && (
-                    <div className="hidden lg:block absolute top-8 left-full w-full">
-                      <ArrowRight className="w-6 h-6 text-accent-400 mx-auto" />
-                    </div>
-                  )}
                 </div>
               ))}
             </div>
@@ -547,10 +542,10 @@ const PricingStrategy = () => {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="bg-white text-primary-600 hover:bg-accent-100 text-lg px-8 py-3" onClick={handleViewSampleAnalysis}>
+              {/* <Button variant="outline" size="lg" className="bg-white text-primary-600 hover:bg-accent-100 text-lg px-8 py-3" onClick={handleViewSampleAnalysis}>
                 <Eye className="mr-2 w-5 h-5" />
                 View Sample Reports
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>

@@ -206,32 +206,32 @@ const MarketResearch = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-100 to-primary-200 py-20">
+      <section className="bg-primary-600 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center bg-primary-100 text-primary-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="inline-flex items-center bg-white text-primary-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <BarChart className="w-4 h-4 mr-2" />
               Market Intelligence & Research
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Make Data-Driven Export Decisions with 
-              <span className="text-primary-600"> Expert Market Research</span>
+              <span className="text-white"> Expert Market Research</span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-xl text-primary-100 mb-8 leading-relaxed">
               Get comprehensive market intelligence reports that help you identify the best export 
               opportunities, understand buyer preferences, and navigate regulatory requirements in global markets.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-primary-600 hover:bg-primary-700 text-lg px-8 py-3">
+              <Button asChild size="lg" className="bg-white hover:bg-white text-primary-600 text-lg px-8 py-3">
                 <Link to="/consulting/book-free-call">
                   Request Market Research
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="text-secondary-foreground text-lg px-8 py-3" onClick={handleDownloadSampleReport}>
+              {/* <Button variant="outline" size="lg" className="text-secondary-foreground text-lg px-8 py-3" onClick={handleDownloadSampleReport}>
                 <Eye className="mr-2 w-5 h-5" />
                 View Sample Report
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>
@@ -535,10 +535,10 @@ const MarketResearch = () => {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
-            <Button variant="outline" size="lg" className="bg-white text-primary-600 hover:bg-primary-50" onClick={handleDownloadSampleReport}>
+            {/* <Button variant="outline" size="lg" className="bg-white text-primary-600 hover:bg-primary-50" onClick={handleDownloadSampleReport}>
               <Eye className="mr-2 w-5 h-5" />
               View Sample Report
-            </Button>
+            </Button> */}
           </div>
         </div>
       </section>

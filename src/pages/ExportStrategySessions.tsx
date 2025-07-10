@@ -231,46 +231,46 @@ const ExportStrategySessions = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-100 to-white py-20">
+      <section className="bg-primary-600 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center bg-primary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="inline-flex items-center bg-white text-primary-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Users className="w-4 h-4 mr-2" />
               Expert Mentorship Available
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
               1-on-1 Export Strategy
-              <span className="text-primary-600"> Mentorship Sessions</span>
+              <span className="text-white"> Mentorship Sessions</span>
             </h1>
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+            <p className="text-xl text-primary-100 mb-8 leading-relaxed">
               Get personalized guidance from seasoned export professionals. Our experts have 
               helped thousands of businesses successfully enter and scale in international markets. 
               Skip the learning curve and accelerate your export success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-primary-600 hover:bg-primary-700 text-white text-lg px-8 py-3">
+              <Button asChild size="lg" className="bg-white hover:bg-white text-primary-600 text-lg px-8 py-3">
                 <Link to="/consulting/book-free-call">
                   Book Your Strategy Session
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="text-gray-700 text-lg px-8 py-3">
+              {/* <Button variant="outline" size="lg" className="text-gray-700 text-lg px-8 py-3">
                 <Eye className="mr-2 w-5 h-5" />
                 View Sample Reports
-              </Button>
+              </Button> */}
             </div>
             
-            <div className="flex items-center justify-center space-x-8 mt-12 text-sm text-gray-600">
+            <div className="flex items-center justify-center space-x-8 mt-12 text-sm text-primary-100">
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-primary-600" />
+                <CheckCircle className="w-5 h-5 text-white" />
                 <span>Expert consultants</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-primary-600" />
+                <CheckCircle className="w-5 h-5 text-white" />
                 <span>Personalized strategy</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-primary-600" />
+                <CheckCircle className="w-5 h-5 text-white" />
                 <span>Actionable roadmap</span>
               </div>
             </div>
@@ -484,11 +484,6 @@ const ExportStrategySessions = () => {
                     <h3 className="text-xl font-semibold text-gray-900 mb-4">{step.title}</h3>
                     <p className="text-gray-600">{step.description}</p>
                   </div>
-                  {index < process.length - 1 && (
-                    <div className="hidden lg:block absolute top-8 left-full w-full">
-                      <ArrowRight className="w-6 h-6 text-gray-400 mx-auto" />
-                    </div>
-                  )}
                 </div>
               ))}
             </div>
@@ -606,13 +601,13 @@ const ExportStrategySessions = () => {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
-              <Button 
+              {/* <Button 
                 size="lg" 
                 className="bg-white text-primary-600 hover:bg-primary-100 text-lg px-8 py-3"
               >
                 <Eye className="mr-2 w-5 h-5" />
                 View Sample Reports
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>

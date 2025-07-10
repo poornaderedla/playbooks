@@ -111,21 +111,21 @@ const Consulting = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-100 via-white to-primary-200 py-20">
+      <section className="relative bg-primary-600 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-6 bg-primary-100 text-primary-800 hover:bg-primary-100">
+            <Badge className="mb-6 bg-white text-primary-600 hover:bg-gray-100">
               AI-Powered EXIM Consulting
             </Badge>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary-600 to-primary-600 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               Export Smarter. Scale Faster.
             </h1>
-            <p className="text-xl text-foreground mb-8 leading-relaxed">
+            <p className="text-xl text-primary-100 mb-8 leading-relaxed">
               AI-Powered EXIM Consulting for Indian Exporters & Global Buyers. 
               Navigate international trade with confidence and accelerate your global growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3">
+              <Button asChild size="lg" className="bg-white hover:bg-white text-primary-600 px-8 py-3">
                 <Link to="/consulting/book-free-call">   
                   Book Free Discovery Call
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -143,8 +143,8 @@ const Consulting = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl font-bold text-primary-600">{stat.value}</div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
+                <div className="text-3xl font-bold text-white">{stat.value}</div>
+                <div className="text-sm text-primary-100">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -249,11 +249,6 @@ const Consulting = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{step.description}</p>
-                
-                {index < processSteps.length - 1 && (
-                  <div className="hidden md:block absolute top-10 left-1/2 w-full h-0.5 bg-gradient-to-r from-primary-200 to-primary-200 z-0" 
-                       style={{ transform: 'translateX(10px)', width: 'calc(100% - 20px)' }} />
-                )}
               </div>
             ))}
           </div>

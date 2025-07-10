@@ -199,46 +199,46 @@ const ComplianceDocs = () => {
   return (
     <div className="min-h-screen bg-primary-100">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-100 to-primary-200 py-20">
+      <section className="bg-primary-600 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center bg-primary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="inline-flex items-center bg-white text-primary-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Shield className="w-4 h-4 mr-2" />
               Global Compliance Experts
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-primary-900 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Master Global Export
-              <span className="text-primary-600"> Compliance & Documentation</span>
+              <span className="text-white"> Compliance & Documentation</span>
             </h1>
-            <p className="text-xl text-primary-600 mb-8 leading-relaxed">
+            <p className="text-xl text-primary-100 mb-8 leading-relaxed">
               Navigate complex international trade regulations with confidence. Our experts ensure 
               100% compliance with destination country requirements, preventing costly delays 
               and penalties in global markets.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-primary-100 text-primary-600 hover:bg-primary-200 text-lg px-8 py-3">
+            <Button asChild size="lg" className="bg-white hover:bg-white text-primary-600 text-lg px-8 py-3">
                 <Link to="/consulting/book-free-call">
                   Schedule Compliance Consultation
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="text-primary-700 text-lg px-8 py-3" onClick={handleViewSampleDocs}>
+              {/* <Button variant="outline" size="lg" className="text-primary-700 text-lg px-8 py-3" onClick={handleViewSampleDocs}>
                 <Eye className="mr-2 w-5 h-5" />
                 View Sample Reports
-              </Button>
+              </Button> */}
             </div>
             
-            <div className="flex items-center justify-center space-x-8 mt-12 text-sm text-primary-600">
+            <div className="flex items-center justify-center space-x-8 mt-12 text-sm text-primary-100">
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-primary-500" />
+                <CheckCircle className="w-5 h-5 text-white" />
                 <span>190+ countries covered</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-primary-500" />
+                <CheckCircle className="w-5 h-5 text-white" />
                 <span>99.8% clearance rate</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-primary-500" />
+                <CheckCircle className="w-5 h-5 text-white" />
                 <span>Expert compliance team</span>
               </div>
             </div>
@@ -376,11 +376,6 @@ const ComplianceDocs = () => {
                     <h3 className="text-xl font-semibold text-primary-900 mb-4">{step.title}</h3>
                     <p className="text-primary-600">{step.description}</p>
                   </div>
-                  {index < process.length - 1 && (
-                    <div className="hidden lg:block absolute top-8 left-full w-full">
-                      <ArrowRight className="w-6 h-6 text-primary-400 mx-auto" />
-                    </div>
-                  )}
                 </div>
               ))}
             </div>
@@ -478,13 +473,13 @@ const ComplianceDocs = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary-200">
+      <section className="py-20 bg-primary-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-100 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Ensure Compliance Success?
             </h2>
-            <p className="text-xl text-primary-600 mb-8">
+            <p className="text-xl mb-8 text-primary-100">
               Don't let compliance issues derail your export success. Get expert guidance today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -494,10 +489,10 @@ const ComplianceDocs = () => {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="bg-primary-100 text-primary-600 hover:bg-primary-200 text-lg px-8 py-3" onClick={handleViewSampleDocs}>
+              {/* <Button variant="outline" size="lg" className="bg-primary-100 text-primary-600 hover:bg-primary-200 text-lg px-8 py-3" onClick={handleViewSampleDocs}>
                 <Eye className="mr-2 w-5 h-5" />
                 View Sample Reports
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>
