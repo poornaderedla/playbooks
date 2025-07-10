@@ -111,8 +111,6 @@ const Playbook2 = () => {
 
   return (
     <div className="font-sans bg-gray-50 min-h-screen w-full">
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-      <style>{`body { font-family: 'Inter', sans-serif; }`}</style>
       <h1 className="text-2xl md:text-3xl font-bold text-center mb-6 mt-4 font-serif truncate">The Definitive Playbook for the Indian Export-Import Entrepreneur</h1>
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6 h-[80vh] md:h-[85vh]">
         {/* Sidebar TOC */}

@@ -93,8 +93,6 @@ const Playbook13 = () => {
 
   return (
     <div className="font-sans bg-gray-50 min-h-screen w-full">
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-      <style>{`body { font-family: 'Inter', sans-serif; }`}</style>
       <h1 className="text-xl md:text-2xl font-bold text-center mb-6 mt-4 font-serif truncate">The Definitive Playbook for U.S. and EU Imports: A Comprehensive Guide for Global Businesses</h1>
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6 h-[80vh] md:h-[85vh]">
         {/* Sidebar TOC */}
@@ -189,7 +187,7 @@ const Playbook13 = () => {
         <main
           ref={contentRef}
           className="flex-1 bg-white rounded-lg shadow p-4 md:p-6 overflow-y-auto h-full text-justify"
-          style={{ scrollBehavior: 'smooth', fontFamily: 'Inter, sans-serif', textAlign: 'justify', textJustify: 'inter-word' }}
+          style={{ scrollBehavior: 'smooth', textAlign: 'justify', textJustify: 'inter-word' }}
         >
           {/* Content Sections */}
           <section id="introduction" className="mb-8">
