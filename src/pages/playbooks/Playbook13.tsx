@@ -793,7 +793,7 @@ const Playbook13 = () => {
                 <ol className="list-decimal ml-6">
                   <li>Access the official TARIC consultation tool on the European Commission's Taxation and Customs Union website.</li>
                   <li>Begin by searching for the product using keywords or, if known, the first 6 digits of the HS code.</li>
-                  <li>Navigate through the hierarchical structure (Chapter -> Heading -> Subheading) to find the correct 8-digit CN code that most accurately describes the product.</li>
+                  <li>Navigate through the hierarchical structure (Chapter {'->'} Heading {'->'} Subheading) to find the correct 8-digit CN code that most accurately describes the product.</li>
                   <li>Select the product's country of origin.</li>
                   <li>The database will then display the full 10-digit TARIC code and a comprehensive list of all applicable measures. This includes the standard "Third Country Duty" rate, any available preferential tariff rates under trade agreements, and details of any other regulations, restrictions, or required certificates.</li>
                 </ol>

@@ -737,7 +737,7 @@ const Playbook12 = () => {
                       <li>[ ] Goods, price, currency?</li>
                       <li>[ ] Incoterms® 2020 rule (e.g., "FOB Shanghai Incoterms® 2020")?</li>
                       <li>[ ] Governing Law and Jurisdiction/Arbitration seat?</li>
-                      <li>[ ] Dispute Resolution Ladder (Negotiation -> Mediation -> Arbitration)?</li>
+                      <li>[ ] Dispute Resolution Ladder (Negotiation {'->'} Mediation {'->'} Arbitration)?</li>
                     </ul>
                   </li>
                   <li>[ ] Letter of Credit (if applicable):
@@ -968,41 +968,41 @@ const Playbook12 = () => {
             <ol className="list-decimal ml-6 mb-2">
               <li><b>Question 1: What is the mode of transport?</b>
                 <ul className="list-disc ml-6 mb-2">
-                  <li>Path A: Sea or Inland Waterway Only -> Proceed to Question 2.</li>
-                  <li>Path B: Any Mode (including Air, Road, Rail, Multimodal) -> Proceed to Question 3.</li>
+                  <li>Path A: Sea or Inland Waterway Only {'->'} Proceed to Question 2.</li>
+                  <li>Path B: Any Mode (including Air, Road, Rail, Multimodal) {'->'} Proceed to Question 3.</li>
                 </ul>
               </li>
               <li><b>(Path A) Question 2: Who is responsible for the main international carriage?</b>
                 <ul className="list-disc ml-6 mb-2">
                   <li>Buyer Arranges Main Carriage:
                     <ul className="list-disc ml-6 mb-2">
-                      <li>Seller delivers goods alongside the vessel? -> FAS</li>
-                      <li>Seller delivers goods on board the vessel? -> FOB</li>
+                      <li>Seller delivers goods alongside the vessel? {'->'} FAS</li>
+                      <li>Seller delivers goods on board the vessel? {'->'} FOB</li>
                     </ul>
                   </li>
                   <li>Seller Arranges Main Carriage:
                     <ul className="list-disc ml-6 mb-2">
-                      <li>Seller pays for freight only? -> CFR</li>
-                      <li>Seller pays for freight and insurance? -> CIF</li>
+                      <li>Seller pays for freight only? {'->'} CFR</li>
+                      <li>Seller pays for freight and insurance? {'->'} CIF</li>
                     </ul>
                   </li>
                 </ul>
               </li>
               <li><b>(Path B) Question 3: What is the seller's delivery obligation?</b>
                 <ul className="list-disc ml-6 mb-2">
-                  <li>Minimum Obligation (Seller delivers at own premises): -> EXW</li>
-                  <li>Seller Delivers to Buyer's Carrier at Origin: -> FCA</li>
+                  <li>Minimum Obligation (Seller delivers at own premises): {'->'} EXW</li>
+                  <li>Seller Delivers to Buyer's Carrier at Origin: {'->'} FCA</li>
                   <li>Seller Arranges Main Carriage (but risk transfers at origin):
                     <ul className="list-disc ml-6 mb-2">
-                      <li>Seller pays for carriage only? -> CPT</li>
-                      <li>Seller pays for carriage and high-cover insurance? -> CIP</li>
+                      <li>Seller pays for carriage only? {'->'} CPT</li>
+                      <li>Seller pays for carriage and high-cover insurance? {'->'} CIP</li>
                     </ul>
                   </li>
                   <li>Seller Responsible for Delivery to Destination (risk transfers at destination):
                     <ul className="list-disc ml-6 mb-2">
-                      <li>Seller delivers ready for unloading? -> DAP</li>
-                      <li>Seller delivers and unloads? -> DPU</li>
-                      <li>Seller delivers, unloads, and pays import duties? -> DDP</li>
+                      <li>Seller delivers ready for unloading? {'->'} DAP</li>
+                      <li>Seller delivers and unloads? {'->'} DPU</li>
+                      <li>Seller delivers, unloads, and pays import duties? {'->'} DDP</li>
                     </ul>
                   </li>
                 </ul>
