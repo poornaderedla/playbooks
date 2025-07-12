@@ -12,29 +12,76 @@ const BlogDetail = () => {
   const [error, setError] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
 
+  // Decode the slug from URL parameters
+  const decodedSlug = slug ? decodeURIComponent(slug) : null;
+  console.log('BlogDetail - slug from params:', slug);
+  console.log('BlogDetail - decoded slug:', decodedSlug);
+
   useEffect(() => {
-    setLoading(true);
-    setError(null);
-    fetch(getFullUrl(`/api/blog/posts/${slug}/public`))
+    if (!decodedSlug) {
+      setError('No slug provided');
+      setLoading(false);
+      return;
+    }
+
+    console.log('Fetching blog post with slug:', decodedSlug);
+    fetch(getFullUrl(`/api/blog/posts/${decodedSlug}/public`))
       .then((res) => {
-        if (!res.ok) throw new Error('Blog post not found');
+        console.log('Blog post response status:', res.status);
+        if (!res.ok) {
+          if (res.status === 404) {
+            throw new Error('Blog post not found');
+          } else if (res.status === 403) {
+            throw new Error('Access denied - please try again later');
+          } else {
+            throw new Error(`Server error: ${res.status}`);
+          }
+        }
         return res.json();
       })
       .then((data) => {
+        console.log('Blog post data received:', data);
+        if (!data || !data.title) {
+          throw new Error('Invalid blog post data received');
+        }
         setPost(data);
         setLoading(false);
       })
       .catch((err) => {
+        console.error('Error fetching blog post:', err);
         setError(err && typeof err.message === 'string' ? err.message : 'Error fetching blog post');
         setLoading(false);
       });
-  }, [slug]);
+  }, [decodedSlug]);
 
   if (loading) {
     return <div className="text-center py-20 text-lg text-gray-500">Loading blog post...</div>;
   }
   if (error) {
-    return <div className="text-center py-20 text-red-500">{error}</div>;
+    return (
+      <div className="min-h-screen bg-white flex items-center justify-center">
+        <div className="max-w-md mx-auto text-center p-8">
+          <div className="mb-6">
+            <h1 className="text-2xl font-bold text-gray-900 mb-2">Oops!</h1>
+            <p className="text-gray-600 mb-4">{error}</p>
+          </div>
+          <div className="space-y-4">
+            <Link to="/blog">
+              <Button className="w-full">
+                ← Back to Blog
+              </Button>
+            </Link>
+            <Button 
+              variant="outline" 
+              className="w-full"
+              onClick={() => window.location.reload()}
+            >
+              Try Again
+            </Button>
+          </div>
+        </div>
+      </div>
+    );
   }
   if (!post) {
     return null;

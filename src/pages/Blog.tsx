@@ -28,10 +28,13 @@ const Blog = () => {
         return res.json();
       })
       .then((data) => {
+        console.log('Blog posts data:', data);
+        console.log('Blog posts with slugs:', data.filter(post => post.slug));
         setBlogPosts(data);
         setLoading(false);
       })
       .catch((err) => {
+        console.error('Error fetching blogs:', err);
         setError(err.message);
         setLoading(false);
       });
@@ -127,7 +130,7 @@ const Blog = () => {
                     <div className="flex items-center gap-2 mb-2">
                       <Badge variant="secondary">{post.category}</Badge>
                     </div>
-                    <Link to={`/blog/${post.slug}`} className="block group-hover:text-primary transition-colors line-clamp-2 font-bold text-lg md:text-xl mb-1 hover:underline focus:underline">
+                    <Link to={`/blog/${encodeURIComponent(post.slug)}`} className="block group-hover:text-primary transition-colors line-clamp-2 font-bold text-lg md:text-xl mb-1 hover:underline focus:underline">
                       {post.title}
                     </Link>
                     <CardDescription className="line-clamp-3">
@@ -158,7 +161,7 @@ const Blog = () => {
                         </Badge>
                       ))}
                     </div>
-                    <Link to={`/blog/${post.slug}`}>
+                    <Link to={`/blog/${encodeURIComponent(post.slug)}`}>
                       <Button className="w-full group/btn">
                         Read More
                         <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
