@@ -6,20 +6,21 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function getApiBaseUrl() {
-  return import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
+  return import.meta.env.VITE_API_BASE_URL || 'https://exim-backend-s5lf.onrender.com';
 }
 
 export function getFullUrl(path: string) {
   if (!path) return '';
   if (path.startsWith('http')) return path;
-  // If path starts with /uploads, use the API base URL
   if (path.startsWith('/uploads')) {
     return getApiBaseUrl() + path;
   }
-  // If path starts with /api, use the API base URL
   if (path.startsWith('/api')) {
     return getApiBaseUrl() + path.replace(/^\/api/, '/api');
   }
-  // Otherwise, treat as static asset
-  return path.startsWith('/') ? path : `/${path}`;
+  // If it's just a filename (no leading slash), treat as upload
+  if (!path.startsWith('/')) {
+    return getApiBaseUrl() + '/uploads/' + path;
+  }
+  return path;
 }

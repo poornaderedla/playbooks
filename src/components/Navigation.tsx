@@ -106,9 +106,6 @@ const Navigation = () => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="flex items-center justify-center w-8 h-8 bg-primary-600 rounded-md">
-              <Globe className="w-5 h-5 text-white" />
-            </div>
             <span className="font-bold text-xl">Drehill</span>
           </Link>
 

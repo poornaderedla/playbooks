@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Phone, Mail, MapPin, Clock, Globe, ArrowRight, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { getFullUrl } from '@/lib/utils';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -26,7 +27,7 @@ const Contact = () => {
     setSubmitSuccess(false);
     setSubmitError('');
     try {
-      const response = await fetch('/api/contact/submit-form', {
+      const response = await fetch(getFullUrl('/api/contact/submit-form'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

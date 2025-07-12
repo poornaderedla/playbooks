@@ -6,6 +6,7 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { getFullUrl } from '@/lib/utils';
 
 const XLogo = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" {...props}>
@@ -63,7 +64,7 @@ const Footer = () => {
     setFooterLoading(true);
     setFooterMsg('');
     try {
-      const res = await fetch('/api/contact/subscribe', {
+      const res = await fetch(getFullUrl('/api/contact/subscribe'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: footerEmail })
@@ -87,9 +88,6 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1 max-w-xs w-full mx-auto">
             <Link to="/" className="inline-flex items-center space-x-2 mb-4">
-              <div className="flex items-center justify-center w-10 h-10 bg-primary-600 rounded-lg">
-                <Globe className="w-6 h-6 text-white" />
-              </div>
               <span className="font-bold text-2xl">Drehill</span>
             </Link>
             <p className="text-black-300 mb-4 leading-relaxed text-sm">

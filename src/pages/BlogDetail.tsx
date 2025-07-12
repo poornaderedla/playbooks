@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Calendar, User, ArrowLeft, Tag } from 'lucide-react';
+import { Calendar, User, ArrowLeft, Tag, X, Maximize2 } from 'lucide-react';
 import { getFullUrl } from '@/lib/utils';
 
 const BlogDetail = () => {
@@ -10,11 +10,12 @@ const BlogDetail = () => {
   const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
     setLoading(true);
     setError(null);
-    fetch(`/api/blog/posts/${slug}/public`)
+    fetch(getFullUrl(`/api/blog/posts/${slug}/public`))
       .then((res) => {
         if (!res.ok) throw new Error('Blog post not found');
         return res.json();
@@ -107,12 +108,23 @@ const BlogDetail = () => {
                   {post.attachments.map((att, idx) => (
                     <div key={idx} className="flex items-center gap-2">
                       {att.type && att.type.startsWith('image/') ? (
-                        <img
-                          src={getFullUrl(att.url)}
-                          alt={att.name}
-                          className="max-h-24 rounded border"
-                          loading="lazy"
-                        />
+                        <div className="flex items-center gap-2">
+                          <img
+                            src={getFullUrl(att.url)}
+                            alt={att.name}
+                            className="max-h-24 rounded border"
+                            loading="lazy"
+                          />
+                          <Button 
+                            size="sm" 
+                            variant="outline"
+                            onClick={() => setSelectedImage({ url: getFullUrl(att.url), name: att.name })}
+                            className="flex items-center gap-1"
+                          >
+                            <Maximize2 className="w-4 h-4" />
+                            View Full Image
+                          </Button>
+                        </div>
                       ) : att.type === 'application/pdf' ? (
                         <a
                           href={getFullUrl(att.url)}
@@ -142,6 +154,26 @@ const BlogDetail = () => {
           </div>
         </div>
       </section>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
+          <div className="relative max-w-4xl max-h-full">
+            <Button
+              onClick={() => setSelectedImage(null)}
+              className="absolute top-4 right-4 z-10 bg-white hover:bg-gray-100 text-gray-800"
+              size="icon"
+            >
+              <X className="w-4 h-4" />
+            </Button>
+            <img
+              src={selectedImage.url}
+              alt={selectedImage.name}
+              className="max-w-full max-h-full object-contain rounded"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

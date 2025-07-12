@@ -22,7 +22,7 @@ const Blog = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('/api/blog/posts/public')
+    fetch(getFullUrl('/api/blog/posts/public'))
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch blogs");
         return res.json();

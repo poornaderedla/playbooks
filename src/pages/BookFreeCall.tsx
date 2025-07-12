@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Calendar, Clock, CheckCircle, Users, Globe, ArrowRight, Phone, Video, MessageSquare } from 'lucide-react';
+import { getFullUrl } from '@/lib/utils';
 
 const BookFreeCall = () => {
   const [formData, setFormData] = useState({
@@ -30,7 +31,7 @@ const BookFreeCall = () => {
     setSubmitSuccess(false);
     setSubmitError('');
     try {
-      const response = await fetch('/api/contact/book-call', {
+      const response = await fetch(getFullUrl('/api/contact/book-call'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

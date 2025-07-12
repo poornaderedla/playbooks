@@ -60,7 +60,7 @@ const Admin = () => {
     setOtpLoading(true);
     setOtpError('');
     try {
-      const res = await fetch(`${API}/auth/send-otp`, { method: 'POST' });
+      const res = await fetch(getFullUrl('/api/auth/send-otp'), { method: 'POST' });
       if (!res.ok) throw new Error('Failed to send OTP');
       setEmailSent(true);
       setStep('otp-verify');
@@ -76,7 +76,7 @@ const Admin = () => {
     setOtpLoading(true);
     setOtpError('');
     try {
-      const res = await fetch(`${API}/auth/verify-otp`, {
+      const res = await fetch(getFullUrl('/api/auth/verify-otp'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ otp }),
@@ -107,7 +107,7 @@ const Admin = () => {
     setLoadingBlogs(true);
     setBlogError('');
     try {
-      const res = await fetch(`${API}/blog/posts`, {
+      const res = await fetch(getFullUrl('/api/blog/posts'), {
         headers: { Authorization: `Bearer ${tk}` },
       });
       if (!res.ok) throw new Error('Failed to fetch blogs');
@@ -156,7 +156,7 @@ const Admin = () => {
     const formData = new FormData();
     formData.append('image', file);
     try {
-      const response = await fetch(`${API}/blog/upload-image`, {
+      const response = await fetch(getFullUrl('/api/blog/upload-image'), {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${adminToken}`
@@ -197,12 +197,16 @@ const Admin = () => {
       Array.from(files).forEach((file: File) => {
         formData.append('files', file);
       });
-      const res = await fetch(`${API}/blog/upload-attachments`, {
+      const res = await fetch(getFullUrl('/api/blog/upload-attachments'), {
         method: 'POST',
         headers: { Authorization: `Bearer ${token}` },
         body: formData,
       });
-      if (!res.ok) throw new Error('Attachments upload failed');
+      if (!res.ok) {
+        const errorData = await res.json();
+        console.error('Upload error response:', errorData);
+        throw new Error(errorData.message || 'Attachments upload failed');
+      }
       const data = await res.json();
       if (!data.attachments) throw new Error('No attachments returned from server');
       setForm(prev => ({
@@ -226,7 +230,7 @@ const Admin = () => {
     setFormError('');
     try {
       const method = editing ? 'PUT' : 'POST';
-      const url = editing ? `${API}/blog/posts/${form.slug}` : `${API}/blog/posts`;
+      const url = editing ? getFullUrl(`/api/blog/posts/${form.slug}`) : getFullUrl('/api/blog/posts');
       const res = await fetch(url, {
         method,
         headers: {
@@ -261,7 +265,7 @@ const Admin = () => {
     if (!window.confirm('Delete this blog post?')) return;
     setBlogError('');
     try {
-      const res = await fetch(`${API}/blog/posts/${identifier}`, {
+      const res = await fetch(getFullUrl(`/api/blog/posts/${identifier}`), {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -281,7 +285,7 @@ const Admin = () => {
   const handleSendToSubscribers = async (blog) => {
     setSendStatus(prev => ({ ...prev, [blog.slug]: 'loading' }));
     try {
-      const res = await fetch(`${API}/blog/send-to-subscribers/${blog.slug}`, {
+      const res = await fetch(getFullUrl(`/api/blog/send-to-subscribers/${blog.slug}`), {
         method: 'POST',
         headers: { Authorization: `Bearer ${token}` },
       });
